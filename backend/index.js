@@ -1,7 +1,6 @@
 //  import express
 const express = require('express')
 const userRouter = require('./routers/userRouter');
-const videoRouter = require('./routers/videoRouter');
 const cors = require('cors');
 
 // initialising express
@@ -14,8 +13,7 @@ app.use(express.json());
 app.use(cors({ origin: ['http://localhost:3000'] }))
 
 // middleware 
-// app.use('/user', userRouter);
-// app.use('/video', videoRouter);
+app.use('/user', userRouter);
 
 // RRoute
 app.get('/', (req, res) => {

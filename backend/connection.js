@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const databasename= "kartik"
+const databasename= "txtomatic"
 const url  =`mongodb+srv://kartikeyasthana9:19043101006492@cluster0.rxnvxvb.mongodb.net/${databasename}?retryWrites=true&w=majority`
 
 // connected to database

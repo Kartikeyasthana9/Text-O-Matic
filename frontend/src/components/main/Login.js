@@ -47,57 +47,27 @@ const Login = () => {
                   <div className="card-body px-4 py-5 px-md-5">
                     <form>
                       {/* 2 column grid layout with text inputs for the first and last names */}
-                      <div className="row">
-                        <div className="col-md-6 mb-4">
-                          <div className="form-outline">
-                            <input
-                              type="text"
-                              id="form3Example1"
-                              className="form-control"
-                            />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example1"
-                            >
-                              First name
-                            </label>
-                          </div>
-                        </div>
-                        <div className="col-md-6 mb-4">
-                          <div className="form-outline">
-                            <input
-                              type="text"
-                              id="form3Example2"
-                              className="form-control"
-                            />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example2"
-                            >
-                              Last name
-                            </label>
-                          </div>
-                        </div>
-                      </div>
+                      <div className="row"></div>
                       {/* Email input */}
                       <div className="form-outline mb-4">
                         <input
                           type="email"
-                          id="form3Example3"
-                          className="form-control"
+                          id="email"
+                          className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example3">
-                          Email address
+                        <label className="form-label" htmlFor="form3Example3cg">
+                          Email Address
                         </label>
                       </div>
                       {/* Password input */}
+
                       <div className="form-outline mb-4">
                         <input
                           type="password"
-                          id="form3Example4"
-                          className="form-control"
+                          id="password"
+                          className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example4">
+                        <label className="form-label" htmlFor="form2Example17">
                           Password
                         </label>
                       </div>

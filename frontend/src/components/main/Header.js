@@ -43,10 +43,10 @@ const Header = () => {
               </ul>
               {/* Left links */}
               <div className="d-flex align-items-center">
-                <NavLink  className="btn btn-link px-3 me-2" to="/login">
+                <NavLink  className="btn btn-link px-3 me-2" to="/main/login">
                   Login
                 </NavLink>
-                <NavLink  className="btn btn-primary me-3" to="/signup">
+                <NavLink  className="btn btn-primary me-3" to="/main/signup">
                   Sign up for free
                 </NavLink>
                 <a
