@@ -71,28 +71,13 @@ const Login = () => {
                           Password
                         </label>
                       </div>
-                      {/* Checkbox */}
-                      <div className="form-check d-flex justify-content-center mb-4">
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          defaultValue=""
-                          id="form2Example33"
-                          defaultChecked=""
-                        />
-                        <label
-                          className="form-check-label"
-                          htmlFor="form2Example33"
-                        >
-                          Subscribe to our newsletter
-                        </label>
-                      </div>
+                     
                       {/* Submit button */}
                       <button
                         type="submit"
                         className="btn btn-primary btn-block mb-4"
                       >
-                        Sign up
+                        Login
                       </button>
                       {/* Register buttons */}
                       <div className="text-center">

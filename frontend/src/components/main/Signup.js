@@ -31,53 +31,7 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="container pt-5">
-        <div className="card">
-          <div className="card-body">
-            <Formik
-              initialValues={{ name: "", email: "", password: "", age: "" }}
-              onSubmit={userSubmit}
-            >
-              {({ values, handleSubmit, handleChange }) => (
-                <form onSubmit={handleSubmit}>
-                  <label>Name</label>
-                  <input
-                    className="form-control"
-                    id="name"
-                    onChange={handleChange}
-                    value={values.name}
-                  />
-                  <label>Email</label>
-                  <input
-                    className="form-control"
-                    id="email"
-                    onChange={handleChange}
-                    value={values.email}
-                  />
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    onChange={handleChange}
-                    value={values.password}
-                  />
-                  <label>Age</label>
-                  <input
-                    className="form-control"
-                    id="age"
-                    onChange={handleChange}
-                    value={values.age}
-                  />
-                  <button type="submit" className="btn btn-primary mt-4">
-                    Submit
-                  </button>
-                </form>
-              )}
-            </Formik>
-          </div>
-        </div>
-      </div>
+     
 
 
 
@@ -140,13 +94,13 @@ const Signup = () => {
                               <div className="form-outline">
                                 <input
                                   type="text"
-                                  id="form3Example1"
+                                  id="name"
                                   className="form-control"
-                                />
+                                  onChange={handleChange}
+                                  value={values.name}/>
                                 <label
                                   className="form-label"
-                                  htmlFor="form3Example1"
-                                >
+                                  htmlFor="form3Example1">
                                   Name
                                 </label>
                               </div>
@@ -156,8 +110,10 @@ const Signup = () => {
                           <div className="form-outline mb-4">
                             <input
                               type="email"
-                              id="form3Example3"
+                              id="email"
                               className="form-control"
+                              onChange={handleChange}
+                              value={values.email}
                             />
                             <label
                               className="form-label"
@@ -170,27 +126,27 @@ const Signup = () => {
                           <div className="form-outline mb-4">
                             <input
                               type="password"
-                              id="form3Example4"
+                              id="password"
                               className="form-control"
-                            />
+                              onChange={handleChange}
+                              value={values.password} />
                             <label
                               className="form-label"
-                              htmlFor="form3Example4"
-                            >
+                              htmlFor="form3Example4">
                               Password
                             </label>
                           </div>
                           {/* phone number */}
                           <div className="form-outline mb-4">
                             <input
-                              type="email"
-                              id="form3Example3"
+                              
+                              id="number"
                               className="form-control"
-                            />
+                              onChange={handleChange}
+                              value={values.number} />
                             <label
                               className="form-label"
-                              htmlFor="form3Example3"
-                            >
+                              htmlFor="form3Example3">
                               Phone Number
                             </label>
                           </div>
@@ -198,9 +154,8 @@ const Signup = () => {
                           {/* Submit button */}
                           <button
                             type="submit"
-                            className="btn btn-primary btn-block mb-4"
-                          >
-                            Sign up
+                            className="btn btn-primary btn-block mb-4" >
+                            Submit
                           </button>
                           {/* Register buttons */}
                           <div className="text-center">
