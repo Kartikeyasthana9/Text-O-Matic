@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'
 import "./Style.css";
+import mysecondimg from "./img/second.png";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
             <img
               className="logo"
               alt="TEXTOMATIC"
-              src=""
+              src={mysecondimg}
             />
           </NavLink>
           <nav className="main-nav">
