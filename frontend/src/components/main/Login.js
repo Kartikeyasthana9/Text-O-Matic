@@ -1,6 +1,53 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
+import { Formik } from "formik";
+import { AppContext } from '../../AppContext';
+import { EmailOutlined, Visibility, VisibilityOff } from "@mui/icons-material";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+  const Login = () => {
+    const {setloggedIn} = useContext(AppContext)
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+    const loginform = {
+      email: "",
+      password: "",
+    };
+    const loginSubmit = async(formdata) => {
+      console.log(formdata);
+      const response = await fetch("http://localhost:5000/user/authenticate", {
+        method: "POST",
+        body: JSON.stringify(formdata),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        if (response.status === 200) {
+          console.log(response.status);
+              console.log('success')
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Login Success!!👍",
+          });
+           //  session m store krwa lenge jisse 
+           const data= await response.json();
+           console.log(data); 
+           setloggedIn(true);
+          //  this will store user data in session
+           sessionStorage.setItem('user',JSON.stringify(data));
+          navigate('/home');  
+        } else if (response.status === 300) {
+          console.log(response.status);
+                      console.log('something went wrong')
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Login Failed!!👍",
+          });
+        }
+      }
   return (
     <div>
       <>
@@ -45,7 +92,9 @@ const Login = () => {
                 />
                 <div className="card bg-glass">
                   <div className="card-body px-4 py-5 px-md-5">
-                    <form>
+                  <Formik initialValues={loginform} onSubmit={loginSubmit}>
+                      {({ values, handleChange, handleSubmit }) => (
+                    <form onSubmit={handleSubmit}>
                       {/* 2 column grid layout with text inputs for the first and last names */}
                       <div className="row"></div>
                       {/* Email input */}
@@ -71,7 +120,7 @@ const Login = () => {
                           Password
                         </label>
                       </div>
-                     
+
                       {/* Submit button */}
                       <button
                         type="submit"
@@ -108,6 +157,8 @@ const Login = () => {
                         </button>
                       </div>
                     </form>
+                      )}
+                      </Formik>
                   </div>
                 </div>
               </div>
