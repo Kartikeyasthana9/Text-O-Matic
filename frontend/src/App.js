@@ -12,9 +12,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Navigate to="/main/home" />} />
+        <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
-          <Route element={<Home/>} path="home/:formid" />
+          <Route element={<Home/>} path="home" />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
           </Route>
