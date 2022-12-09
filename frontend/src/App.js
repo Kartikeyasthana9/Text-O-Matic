@@ -14,7 +14,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
-            <Route path="home" element={<Home />} />
+          <Route element={<Home/>} path="home/:formid" />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
           </Route>
