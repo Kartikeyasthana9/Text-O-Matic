@@ -1,6 +1,45 @@
 import React from "react";
+import { Formik } from "formik";
+import Swal from "sweetalert2";
+import {useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  const navigate = useNavigate();
+  const loginSubmit = async (formdata, { resetForm }) => {
+    console.log(formdata);
+    resetForm();
+
+    const response = await fetch("http://localhost:5000/user/authenticate", {
+      method: "POST",
+      body: JSON.stringify(formdata),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.status === 200) {
+      console.log("request sent");
+      resetForm();
+      const data = await response.json();
+      sessionStorage.setItem("user", JSON.stringify(data));
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Loggedin Successfully",
+      });
+
+      navigate("/home/:formid");
+    } else if (response.status === 401) {
+      Swal.fire({
+        icon: "error",
+        title: "Failed",
+        text: "Loggedin Failed",
+      });
+    } else {
+      console.log("Unknown error occured");
+    }
+  };
   return (
     <div>
       <>
@@ -45,69 +84,87 @@ const Login = () => {
                 />
                 <div className="card bg-glass">
                   <div className="card-body px-4 py-5 px-md-5">
-                    <form>
-                      {/* 2 column grid layout with text inputs for the first and last names */}
-                      <div className="row"></div>
-                      {/* Email input */}
-                      <div className="form-outline mb-4">
-                        <input
-                          type="email"
-                          id="email"
-                          className="form-control form-control-lg"
-                        />
-                        <label className="form-label" htmlFor="form3Example3cg">
-                          Email Address
-                        </label>
-                      </div>
-                      {/* Password input */}
+                    <Formik
+                      initialValues={{ email: "", password: "" }}
+                      onSubmit={loginSubmit}
+                    >
+                      {({ values, handleChange, handleSubmit }) => (
+                        <form onSubmit={handleSubmit}>
+                          {/* 2 column grid layout with text inputs for the first and last names */}
+                          <div className="row"></div>
+                          {/* Email input */}
+                          <div className="form-outline mb-4">
+                            <input
+                              type="email"
+                              id="email"
+                              className="form-control form-control-lg"
+                              value={values.email}
+                              onChange={handleChange}
+                            />
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example3cg"
+                            >
+                              Email Address
+                            </label>
+                          </div>
+                          {/* Password input */}
 
-                      <div className="form-outline mb-4">
-                        <input
-                          type="password"
-                          id="password"
-                          className="form-control form-control-lg"
-                        />
-                        <label className="form-label" htmlFor="form2Example17">
-                          Password
-                        </label>
-                      </div>
-                     
-                      {/* Submit button */}
-                      <button
-                        type="submit"
-                        className="btn btn-primary btn-block mb-4"
-                      >
-                        Login
-                      </button>
-                      {/* Register buttons */}
-                      <div className="text-center">
-                        <p>or sign up with:</p>
-                        <button
-                          type="button"
-                          className="btn btn-link btn-floating mx-1"
-                        >
-                          <i className="fab fa-facebook-f" />
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-link btn-floating mx-1"
-                        >
-                          <i className="fab fa-google" />
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-link btn-floating mx-1"
-                        >
-                          <i className="fab fa-twitter" />
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-link btn-floating mx-1"
-                        >
-                          <i className="fab fa-github" />
-                        </button>
-                      </div>
-                    </form>
+                          <div className="form-outline mb-4">
+                            <input
+                              type="password"
+                              id="password"
+                              className="form-control form-control-lg"
+                              value={values.password}
+                              onChange={handleChange}
+                            />
+                            <label
+                              className="form-label"
+                              htmlFor="form2Example17"
+                            >
+                              Password
+                            </label>
+                          </div>
+
+                          {/* Submit button */}
+                          <button
+                            type="submit"
+                            variant="contained"
+                            className="btn btn-secondary btn-block mb-4"
+                          >
+                            Login
+                          </button>
+                          {/* Register buttons */}
+                          <div className="text-center">
+                            <p>or sign up with:</p>
+                            <button
+                              type="button"
+                              className="btn btn-link btn-floating mx-1"
+                            >
+                              <i className="fab fa-facebook-f" />
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-link btn-floating mx-1"
+                            >
+                              <i className="fab fa-google" />
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-link btn-floating mx-1"
+                            >
+                              <i className="fab fa-twitter" />
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-link btn-floating mx-1"
+                            >
+                              <i className="fab fa-github" />
+                            </button>
+                          </div>
+                        </form>
+                      )}
+                    </Formik>
                   </div>
                 </div>
               </div>

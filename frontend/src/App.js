@@ -6,6 +6,8 @@ import UserProfile from "./components/user/Profile";
 import Header from "./components/main/Header";
 import Main from "./components/main";
 import Home from "./components/main/Home";
+import ManageUser from "./components/admin/ManageUser";
+import FileManager from "./components/main/FileManager";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <Routes>
             <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
-            <Route path="home" element={<Home />} />
+            <Route path="home/:formid" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="manageuser" element={<ManageUser/>}/>
+            <Route path="filemanager" element={<FileManager/>}/>
           </Route>
 
           {/* <Route element={<Admin />} path="admin" /> */}
