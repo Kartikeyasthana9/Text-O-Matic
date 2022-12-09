@@ -31,10 +31,6 @@ const Signup = () => {
 
   return (
     <div>
-     
-
-
-
       <>
         {/* Section: Design Block */}
         <section className="background-radial-gradient overflow-hidden">
@@ -97,10 +93,12 @@ const Signup = () => {
                                   id="name"
                                   className="form-control"
                                   onChange={handleChange}
-                                  value={values.name}/>
+                                  value={values.name}
+                                />
                                 <label
                                   className="form-label"
-                                  htmlFor="form3Example1">
+                                  htmlFor="form3Example1"
+                                >
                                   Name
                                 </label>
                               </div>
@@ -129,24 +127,27 @@ const Signup = () => {
                               id="password"
                               className="form-control"
                               onChange={handleChange}
-                              value={values.password} />
+                              value={values.password}
+                            />
                             <label
                               className="form-label"
-                              htmlFor="form3Example4">
+                              htmlFor="form3Example4"
+                            >
                               Password
                             </label>
                           </div>
                           {/* phone number */}
                           <div className="form-outline mb-4">
                             <input
-                              
                               id="number"
                               className="form-control"
                               onChange={handleChange}
-                              value={values.number} />
+                              value={values.number}
+                            />
                             <label
                               className="form-label"
-                              htmlFor="form3Example3">
+                              htmlFor="form3Example3"
+                            >
                               Phone Number
                             </label>
                           </div>
@@ -154,7 +155,8 @@ const Signup = () => {
                           {/* Submit button */}
                           <button
                             type="submit"
-                            className="btn btn-primary btn-block mb-4" >
+                            className="btn btn-primary btn-block mb-4"
+                          >
                             Submit
                           </button>
                           {/* Register buttons */}
