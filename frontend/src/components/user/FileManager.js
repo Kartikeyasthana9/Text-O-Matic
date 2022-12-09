@@ -21,7 +21,7 @@ const FileManager = () => {
     if (response.status === 200) {
       console.log('user deleted');
       toast.success('User Deleted 😒');
-      getFileDataFromBackend()
+      getFileDataFromBackend();
     }
   }
 

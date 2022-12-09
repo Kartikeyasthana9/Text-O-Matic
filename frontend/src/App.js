@@ -7,7 +7,7 @@ import Header from "./components/main/Header";
 import Main from "./components/main";
 import Home from "./components/main/Home";
 import ManageUser from "./components/admin/ManageUser";
-import FileManager from "./components/main/FileManager";
+import FileManager from "./components/user/FileManager";
 
 function App() {
   return (
