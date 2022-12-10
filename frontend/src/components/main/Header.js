@@ -23,8 +23,8 @@ const Header = () => {
               </li>
 
               <li>
-                <NavLink className="main-nav-link" to="#">
-                  How it works
+                <NavLink className="main-nav-link" to="/user/summarizer">
+                  Summarizer
                 </NavLink>
               </li>
               <li>

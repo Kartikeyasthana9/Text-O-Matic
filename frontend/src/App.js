@@ -5,29 +5,35 @@ import AdminProfile from "./components/admin/Profile";
 import UserProfile from "./components/user/Profile";
 import Header from "./components/main/Header";
 import Main from "./components/main";
+import User from "./components/user";
 import Home from "./components/main/Home";
 import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
+import Summarizer from "./components/user/Summarizer";
+import Admin from "./components/admin";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Navigate to="/main/home" />} />
+          <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
-            <Route path="manageuser" element={<ManageUser/>}/>
-            <Route path="filemanager" element={<FileManager/>}/>
           </Route>
 
-          {/* <Route element={<Admin />} path="admin" /> */}
-          <Route path="profile" element={<AdminProfile />} />
+          <Route element={<Admin />} path="admin">
+            <Route path="profile" element={<AdminProfile />} />
+            <Route path="manageuser" element={<ManageUser />} />
+          </Route>
 
-          {/* <Route element={<User />} path="user" /> */}
-          <Route path="profile" element={<UserProfile />} />
+          <Route element={<User />} path="user">
+            <Route path="profile" element={<UserProfile />} />
+            <Route path="filemanager" element={<FileManager />} />
+            <Route path="summarizer" element={<Summarizer />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
