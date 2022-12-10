@@ -1,20 +1,18 @@
 import React from "react";
-import { NavLink } from 'react-router-dom'
+import  { useState } from 'react'
+import { NavLink } from "react-router-dom";
 import "./Style.css";
 import mysecondimg from "./img/second.png";
 
 const Header = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div>
       <>
         {/* Navbar */}
         <header className="header">
           <NavLink to="#">
-            <img
-              className="logo"
-              alt="TEXTOMATIC"
-              src={mysecondimg}
-            />
+            <img className="logo" alt="TEXTOMATIC" src={mysecondimg} />
           </NavLink>
           <nav className="main-nav">
             <ul className="main-nav-list">
@@ -23,15 +21,16 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
-              
+
               <li>
-                <NavLink className="main-nav-link" to="#">
-                  How it works
+                <NavLink className="main-nav-link" to="/user/summarizer">
+                  Summarizer
                 </NavLink>
               </li>
               <li>
-                <NavLink className="main-nav-link nav-cta"to="/main/login" >
+                <NavLink className="main-nav-link nav-cta" to="/main/login">
                   Login
+                 
                 </NavLink>
               </li>
               <li>
