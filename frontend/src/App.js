@@ -17,22 +17,35 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Navigate to="/main/home" />} />
+          <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+<<<<<<< HEAD
             <Route path="manageuser" element={<ManageUser/>}/>
             <Route path="filemanager" element={<FileManager/>}/>
             
+=======
+>>>>>>> 195eaf8286aa2b38750b148ff4224a3f2c1a535b
           </Route>
 
-          {/* <Route element={<Admin />} path="admin" /> */}
-          <Route path="profile" element={<AdminProfile />} />
+          <Route element={<Admin />} path="admin">
+            <Route path="profile" element={<AdminProfile />} />
+            <Route path="manageuser" element={<ManageUser />} />
+          </Route>
 
+<<<<<<< HEAD
           <Route element={<User />} path="user" />
           <Route path="profile" element={<UserProfile />} />
           <Route path="audiobook" element={<AudioBook/>}/>
+=======
+          <Route element={<User />} path="user">
+            <Route path="profile" element={<UserProfile />} />
+            <Route path="filemanager" element={<FileManager />} />
+            <Route path="summarizer" element={<Summarizer />} />
+          </Route>
+>>>>>>> 195eaf8286aa2b38750b148ff4224a3f2c1a535b
         </Routes>
       </BrowserRouter>
     </div>
