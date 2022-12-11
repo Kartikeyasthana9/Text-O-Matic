@@ -1,5 +1,9 @@
 import React from "react";
-import 'animate.css';
+import "animate.css";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Fab from "@mui/material/Fab";
+
 
 const Summarizer = () => {
   return (
@@ -44,43 +48,49 @@ const Summarizer = () => {
           </p>
           <br />
           <br />
-          <div className="row" >
+          <div className="row">
             <div className="col-sm-4">
-              <div className="card w-80 animate__animated animate__slideInUp " style={{ background: "#dff1ee" }}>
-                <div className="card-body ">
+              <div
+                className="card w-80 animate__animated animate__slideInUp "
+                style={{ background: "#dff1ee" }}
+              >
+                <div className="card-body" style={{transition:"1sec" }}>
                   <img
                     src="https://www.sammurize.com/images/assets/ils_15.svg"
                     alt=""
                     className="img-fluid  card-img-top "
-                   
-                    
                   />
                   <p>Join Our Platform</p>
                   <p className=" fw-bold">
-                    It only takes a minute. <br/> Set up is smooth and simple
+                    It only takes a minute. <br /> Set up is smooth and simple
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-sm-4">
-              <div className="card w-80 animate__animated animate__slideInUp" style={{ background: "#dff1ee" }} >
-                <div className="card-body" >
+              <div
+                className="card w-80 animate__animated animate__slideInUp"
+                style={{ background: "#dff1ee" }}
+              >
+                <div className="card-body">
                   <img
                     src="https://www.sammurize.com/images/assets/ils_16.svg"
                     alt=""
                     className="img-fluid  card-img-top"
-                    
                   />
                   <p>Create new research</p>
                   <p className=" fw-bold">
-                    Create a new research and  start gathering documents as pdf
+                    Create a new research and start gathering documents as pdf
                     files or public URL article links
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-sm-4">
-              <div className="card w-80 animate__animated animate__slideInUp"style={{ background: "#dff1ee" }} >
+              <div
+                className="card w-80 animate__animated animate__slideInUp"
+                style={{ background: "#dff1ee" }}
+              >
                 <div className="card-body">
                   <img
                     src="https://www.sammurize.com/images/assets/ils_07.svg"
@@ -90,19 +100,50 @@ const Summarizer = () => {
                   />
                   <p>Start summarizing text</p>
                   <p className=" fw-bold">
-                    Get detailed keywords and  <br /> summarize main points  <br /> for each
-                    document
+                    Get detailed keywords and <br /> summarize main points{" "}
+                    <br /> for each document
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
+      {/* ///////////////////////////////// */}
 
-          {/* //////////////////////////////////////////////// */}
+      <div style={{ background: "#dff1ee" }}>
+        <div className="container ">
+          <div className="card">
+            <div className="card-body">
+              <p className="display-5 text-center fw bold animate__animated animate__fadeInBottomLeft"> Summarizer</p>
+              <hr />
 
-          <h1 className="animate__animated animate__bounce">An animated element</h1>
+              <TextField
+                label="Paste or write about your topic then click on the summarize button"
+                multiline
+                rows={12}
+                size="100"
+                variant="filled"
+                fullWidth
+                sx={{ m: 1 }}
+              />
+              <Button variant="outlined" size="small" color="primary">
+                Upload
+                <input hidden accept="document/*" multiple type="file" />
+              </Button>
 
+              <Fab
+                variant="extended"
+                size="medium"
+                color="success"
+                aria-label="add"
+                style={{ float: "right" }}
+              >
+                Summarize
+              </Fab>
+            </div>
+          </div>
         </div>
       </div>
     </div>
