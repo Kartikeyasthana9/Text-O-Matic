@@ -11,10 +11,12 @@ import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
 import Summarizer from "./components/user/Summarizer";
 import Admin from "./components/admin";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div>
+      <Toaster position="top-left" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/main/home" />} />

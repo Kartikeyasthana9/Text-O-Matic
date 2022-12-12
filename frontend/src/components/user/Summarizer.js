@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "animate.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
 
 const Summarizer = () => {
+
+  const [selFile, setSelFile] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    console.log(file);
+    setSelFile(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    console.log('uploading File ...');
+
+
+    fetch("http://localhost:5000/util/uploadfile", {
+        method: "POST",
+        body: fd,
+    }).then(async (res) => {
+        console.log(res.status);
+    });
+};
+
   return (
     <div>
       <header className="bg-secondary">
@@ -130,10 +151,10 @@ const Summarizer = () => {
                 fullWidth
                 sx={{ m: 1 }}
               />
-              <Button variant="outlined" size="small" color="primary">
-                Upload
-                <input hidden accept="document/*" multiple type="file" />
-              </Button>
+              <label className="btn btn-primary" htmlFor="upload-doc">
+                <i class="fas fa-upload"></i>&nbsp; Upload
+              </label>
+                <input id="upload-doc" hidden accept="document/*" type="file" />
 
               <Fab
                 variant="extended"
