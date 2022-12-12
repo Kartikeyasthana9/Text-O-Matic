@@ -1,95 +1,77 @@
 import React from 'react'
+import audiobookimg from "./img/audiobook.png";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Fab from "@mui/material/Fab";
 
 const AudioBook = () => {
   return (
     <div>
-      <div className="header">
-        <div className="header-left">
-  <ul className='nav-links'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}>
-      <span><i class="fas fa-align-justify"></i>
-            <ul className="drop-menu">
-              <li><a href="#">Channels</a></li>
-              <li><a href="#">Languages</a></li>
-              <li><a href="#">Genres</a></li>
-            </ul>
-            </span>
-         <img
-            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
-            alt=""
-          />
-          
-    
-          <li>
-            <a href="#" className="desktop-item">TV</a>
+     <header className="bg-secondary">
+        <div className="container">
+          <p className="display-2 text-center fw-bold text-white ">
+            Audiobook
+          </p>
 
-          <ul class="drop-menu">          
-                      <li><a href="#">Hotstar Specials</a></li>
-                      <li><a href="#">Quix</a></li>
-                      <li><a href="#">Star Jalsha</a></li>
-                      <li><a href="#">Star Plus</a></li>
-                      <li><a href="#">Star Vijay</a></li>
-                      <li><a href="#">Star Bharat</a></li>
-                      <li><a href="#">Asianet</a></li>
-                      <li><a href="#">Star Maa</a></li>
-                      <li><a href="#">more...</a></li>
-                  </ul>
-                  </li>
-                  <li>
-                  <a href="#" className="desktop-item">Movies</a>
-          
-              <ul class="drop-menu">                   
-                      <li><a href="#">Hindi</a></li>
-                      <li><a href="#">Bengali</a></li>
-                      <li><a href="#">Telugu</a></li>
-                      <li><a href="#">Malayalam</a></li>
-                      <li><a href="#">Tamil</a></li>
-                      <li><a href="#">Marathi</a></li>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Kannada</a></li>
-                  </ul>
-              </li>
-          <li  > 
-          <a href="#" className="desktop-item">Sports</a>
-      
-       
-          <ul class="drop-menu">
-                   <li><a href="#">Cricket</a></li>
-                   <li><a href="#">Football</a></li>
-                   <li><a href="#">Formula 1</a></li>
-                   <li><a href="#">eSports</a></li>
-                   <li><a href="#">Tennis</a></li>
-                   <li><a href="#">Formula E</a></li>
-                   <li><a href="#">Martial Arts</a></li>
-                   <li><a href="#">Basketball</a></li>
-                   <li><a href="#">Badminton</a></li>
-                   <li><a href="#">Hockey</a></li>
-                   <li><a href="#">Athletics</a></li>
-                   <li><a href="#">Golf</a></li>
-                   <li><a href="#">Wrestling</a></li>
-                   <li><a href="#">Kabaddi</a></li>
-                   <li><a href="#">Table Tennis</a></li>
-              </ul>
-          </li>
-          <li><a href="#">Premium</a></li>
-          <li><a href="#">Disney+</a></li>
-         <li><a href="#"><img
-            src="https://www.hotstar.com/assets/4aa70ede8904e16b7630300c09219c8e.svg"
-            alt=""
-            className="kids" id="kids"
-          /></a></li>
-        </ul>
-        <div className="header-right">
-          <Input style={{color:'rgb(123 127 135)'}} placeholder="Search" className="search" />
-          <i class="fas fa-search"></i>
-          <button className="btn">SUBSCRIBE</button>
-          <Link to='login'>
-          <span className="log" >LOGIN</span>
-          </Link>
-                  </div>
+          <div class="header-text-box">
+            <p class="text-center fw-bold">
+              A text summarizer is an online tool that wraps up a text to a
+              specified short length. It condenses a long article to main
+              points. The need for text summarizers is increasing day by day,
+              because of time constraints. People are looking for shortcut
+              methods to learn ideas in lesser time. Even text summarizers are
+              helping them to decide whether a book, a research paper, or an
+              article is worth reading or not.
+            </p>
+          </div>
+          <div>
+            <img
+              src={audiobookimg}
+              className="img-fluid animate__animated animate__fadeInRight"
+              width="540"
+              height="356"
+              alt="Photo"
+            />
+          </div>
         </div>
+      </header>
+      <div style={{ background: "#dff1ee" }}>
+        <div className="container ">
+          <div className="card">
+            <div className="card-body">
+              <p className="display-5 text-center fw bold animate__animated animate__fadeInBottomLeft">
+                {" "}
+                Audiobook <i class="fas fa-headphones"></i>
+              </p>
+              <hr />
+
+              <TextField
+                label="Paste or write about your topic then click on the generate button"
+                multiline
+                rows={12}
+                size="100"
+                variant="filled"
+                fullWidth
+                sx={{ m: 1 }}
+              />
+              <label className="btn btn-primary" htmlFor="upload-doc">
+                <i class="fas fa-upload"></i>&nbsp; Upload
+              </label>
+                <input id="upload-doc" hidden accept="document/*" type="file" />
+
+              <Fab
+                variant="extended"
+                size="medium"
+                color="success"
+                aria-label="add"
+                style={{ float: "right" }}
+              >
+                Generate
+              </Fab>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   )
 }

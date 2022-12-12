@@ -10,16 +10,10 @@ import User from "./components/user"
 import Home from "./components/main/Home";
 import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
-<<<<<<< HEAD
 import AudioBook from "./components/user/AudioBook";
 import Summarizer from "./components/user/Summarizer"
 import Admin from "./components/admin"
-=======
-import Summarizer from "./components/user/Summarizer";
-import Admin from "./components/admin";
 import { Toaster } from "react-hot-toast";
->>>>>>> 7d41a60b4dbd4363ea46a658531625743a14e4d1
-
 function App() {
   return (
     <div>
