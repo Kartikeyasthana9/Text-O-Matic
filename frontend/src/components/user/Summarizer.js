@@ -94,7 +94,7 @@ const Summarizer = () => {
               >
                 <div className="card-body">
                   <img
-                    src="https://www.sammurize.com/images/assets/ils_16.svg"
+                    src ="https://www.sammurize.com/images/assets/ils_16.svg"
                     alt=""
                     className="img-fluid  card-img-top"
                   />
@@ -151,10 +151,10 @@ const Summarizer = () => {
                 fullWidth
                 sx={{ m: 1 }}
               />
-              <label className="btn btn-primary" htmlFor="upload-doc">
+              <label className="btn btn-primary" htmlFor="upload-doc" onChange={uploadFile}>
                 <i class="fas fa-upload"></i>&nbsp; Upload
-              </label>
-                <input id="upload-doc" hidden accept="document/*" type="file" />
+              </label>  
+                <input id="upload-doc" hidden accept="document/*" type="file" onChange={uploadFile} />
 
               <Fab
                 variant="extended"

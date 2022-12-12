@@ -7,8 +7,6 @@ app = Flask(__name__)
 def index():
     return jsonify({'message': 'Hello World!'})
 
-
-
 @app.route('/summarize/text', methods=['POST'])
 def summarize():
     if request.method == 'POST':

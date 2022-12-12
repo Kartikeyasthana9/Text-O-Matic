@@ -1,6 +1,8 @@
 //  import express
 const express = require('express');
 const userRouter = require('./routers/userRouter');
+const fileRouter = require('./routers/fileRouter');
+const utilRouter = require('./routers/util');
 const cors = require('cors');
 
 // initialising express
@@ -14,6 +16,8 @@ app.use(cors({ origin: ['http://localhost:3000'] }))
 
 // middleware 
 app.use('/user', userRouter);
+app.use('/file', fileRouter);
+app.use('/util', utilRouter);
 
 // RRoute
 app.get('/', (req, res) => {

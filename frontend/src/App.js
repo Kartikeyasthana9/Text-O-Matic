@@ -37,6 +37,7 @@ function App() {
             <Route path="summarizer" element={<Summarizer />} />
           </Route>
         </Routes>
+        
       </BrowserRouter>
     </div>
   );
