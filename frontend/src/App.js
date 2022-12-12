@@ -6,11 +6,13 @@ import UserProfile from "./components/user/Profile";
 import Header from "./components/main/Header";
 import Main from "./components/main";
 import User from "./components/user"
+
 import Home from "./components/main/Home";
 import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
 import AudioBook from "./components/user/AudioBook";
-
+import Summarizer from "./components/user/Summarizer"
+import Admin from "./components/admin"
 
 function App() {
   return (
@@ -32,10 +34,12 @@ function App() {
             <Route path="manageuser" element={<ManageUser />} />
           </Route>
 
-          <Route element={<User />} path="user" />
+          <Route element={<User />} path="user" >
           <Route path="profile" element={<UserProfile />} />
           <Route path="filemanager" element={<FileManager/>}/>
+          <Route path="summarizer" element={<Summarizer/>}/>
           <Route path="audiobook" element={<AudioBook/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
