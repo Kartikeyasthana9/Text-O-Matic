@@ -2,7 +2,7 @@
 from fastapi import FastAPI, Form, File, UploadFile
 app = FastAPI()
 
-# Create a route
+# Create a route    
 @app.get("/")
 def index():
     return {"data": {"api": "textomatic api", "version": "0.1", "author": "Sufiya ansari"}}

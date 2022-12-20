@@ -26,6 +26,10 @@ const Summarizer = () => {
     });
 };
 
+const summarizeText = async () => {
+  const res= await fetch('http://localhost:8000/textomatic/api/v1/summarize')
+}
+
   return (
     <div>
       <header className="bg-secondary">
