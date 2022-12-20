@@ -7,13 +7,20 @@ import networkx as nx
 def read_article(file_name):
     file = open(file_name, "r")
     filedata = file.readlines()
-    article = filedata[0].split(". ")
+    if len (filedata) == 1:
+        # print ("filedata ->",filedata)
+        article = filedata[0].split(". ")
+        # print ("article ->", article)
+    else:
+        article = filedata
+
     sentences = []
 
     for sentence in article:
-        print(sentence)
+        # print(sentence)
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
-    sentences.pop() 
+    # sentences.pop() 
+    # sentences=[s.strip().replace('.','') for s in sentences]
     
     return sentences
 
@@ -72,7 +79,7 @@ def generate_summary(file_name, top_n=5):
 
     # Step 4 - Sort the rank and pick top sentences
     ranked_sentence = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)    
-    print("Indexes of top ranked_sentence order are ", ranked_sentence)    
+    # print("Indexes of top ranked_sentence order are ", ranked_sentence)    
 
     for i in range(top_n):
       summarize_text.append(" ".join(ranked_sentence[i][1]))
@@ -81,3 +88,4 @@ def generate_summary(file_name, top_n=5):
     print("Summarize Text: \n", ". ".join(summarize_text))
 
 # let's begin
+generate_summary( "data.txt",2)
