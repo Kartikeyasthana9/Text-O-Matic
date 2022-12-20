@@ -29,7 +29,7 @@ const Login = () => {
         text: "Loggedin Successfully",
       });
 
-      navigate("/home/:formid");
+      navigate("/main/home");
     } else if (response.status === 401) {
       Swal.fire({
         icon: "error",

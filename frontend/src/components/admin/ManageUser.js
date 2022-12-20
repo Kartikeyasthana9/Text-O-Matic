@@ -37,7 +37,7 @@ const ManageUser = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
+            <th>Password</th>
             <th></th>
             <th></th>
           </tr>
@@ -48,7 +48,7 @@ const ManageUser = () => {
               <td>{user._id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
-              <td>{user.number}</td>
+              <td>{user.password}</td>
               <td>
                 <button
                   className="btn btn-outline-danger"

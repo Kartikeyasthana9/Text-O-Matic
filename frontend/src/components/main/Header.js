@@ -14,6 +14,7 @@ const Header = () => {
           <NavLink to="#">
             <img className="logo" alt="TEXTOMATIC" src={mysecondimg} />
           </NavLink>
+          
           <nav className="main-nav">
             <ul className="main-nav-list">
               <li>
@@ -25,6 +26,16 @@ const Header = () => {
               <li>
                 <NavLink className="main-nav-link" to="/user/summarizer">
                   Summarizer
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="main-nav-link" to="/user/audiobook">
+                  Audiobook
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="main-nav-link" to="/user/sentiment">
+                  SentimentAnalysis
                 </NavLink>
               </li>
               <li>
@@ -45,6 +56,7 @@ const Header = () => {
             <ion-icon className="icon-mobile-nav" name="close-outline" />
           </button>
         </header>
+        
 
         {/* Navbar */}
       </>
