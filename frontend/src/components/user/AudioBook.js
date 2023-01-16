@@ -27,7 +27,7 @@ const AudioBook = () => {
           <div>
             <img
               src={audiobookimg}
-              className="img-fluid animate__animated animate__fadeInRight"
+              className="img-fluid animate__animated animate__fadeInLeft"
               width="540"
               height="356"
               alt="Photo"

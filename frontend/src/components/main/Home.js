@@ -9,7 +9,7 @@ const Home = () => {
         <div className="hero">
           <div className="hero-text-box">
             <h1 className="heading-primary">
-              Summarize any text with a click of a button
+              Analyze any text with a click of a button
             </h1>
             <p className="hero-description">
               Text-o-matic can condense articles, papers, or documents down to

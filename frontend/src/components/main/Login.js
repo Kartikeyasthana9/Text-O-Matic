@@ -58,9 +58,9 @@ const Login = () => {
                   className="my-5 display-5 fw-bold ls-tight"
                   style={{ color: "hsl(218, 81%, 95%)" }}
                 >
-                  The best offer <br />
+                  Lorem ipsum dolor <br />
                   <span style={{ color: "hsl(218, 81%, 75%)" }}>
-                    for your business
+                  neque debitis eos
                   </span>
                 </h1>
                 <p
