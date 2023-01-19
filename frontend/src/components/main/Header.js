@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import navlogo from "./img/navlogo.png";
 
 const Header = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  
   return (
     <div>
       <>
