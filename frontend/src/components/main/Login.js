@@ -22,14 +22,19 @@ const Login = () => {
       console.log("request sent");
       resetForm();
       const data = await response.json();
-      sessionStorage.setItem("user", JSON.stringify(data));
       Swal.fire({
         icon: "success",
         title: "Success",
         text: "Loggedin Successfully",
       });
+      if(data.isAdmin){
+        sessionStorage.setItem("admin", JSON.stringify(data));
+        navigate("/admin/profile");
+      }else{
+        sessionStorage.setItem("user", JSON.stringify(data));
+        navigate("/main/home");
+      }
 
-      navigate("/main/home");
     } else if (response.status === 401) {
       Swal.fire({
         icon: "error",
@@ -58,9 +63,9 @@ const Login = () => {
                   className="my-5 display-5 fw-bold ls-tight"
                   style={{ color: "hsl(218, 81%, 95%)" }}
                 >
-                  The best offer <br />
+                  Lorem ipsum dolor <br />
                   <span style={{ color: "hsl(218, 81%, 75%)" }}>
-                    for your business
+                  neque debitis eos
                   </span>
                 </h1>
                 <p
