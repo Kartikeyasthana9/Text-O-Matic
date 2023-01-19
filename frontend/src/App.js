@@ -18,6 +18,7 @@ import Admin from "./components/admin";
 import { Toaster } from "react-hot-toast";
 import UserAuth from "./components/UserAuth";
 import AdminAuth from "./components/AdminAuth";
+import Test from "./components/main/Test";
 function App() {
   return (
     <div>
@@ -30,6 +31,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="test" element={<Test />} />
           </Route>
 
           <Route
