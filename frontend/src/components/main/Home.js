@@ -1,6 +1,6 @@
 import React from "react";
 import "./Style.css";
-import myimg from "./img/first.png";
+import myimg from "./img/logonew.png";
 
 const Home = () => {
   return (
@@ -21,24 +21,12 @@ const Home = () => {
             <a href="#" className="btn btn--outline">
               Learn more ↓
             </a>
-            <div className="delivered-meals">
-              <div className="delivered-imgs">
-                {/* <img src="img/customers/customer-1.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-6.jpg" alt="Customer photo" /> */}
-              </div>
-              <p className="delivered-text">
-                {/* <span>250,000+</span> xyz xyz xyz xyz xyz */}
-              </p>
-            </div>
+            
           </div>
           <div className="hero-img-box">
             <img
               src={myimg}
-              className="hero-img"
+              className="hero-img img-fluid animate__animated animate__pulse"
               alt="intelligent text analyzer"
             />
           </div>
