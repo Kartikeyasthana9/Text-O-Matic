@@ -26,13 +26,8 @@ const AudioBook = () => {
           </div>
           <div>
             <img
-<<<<<<< HEAD
               src={"https://media.istockphoto.com/id/1293501048/vector/audio-book-woman-listening-book-with-digital-library-service-users-studying-with-audiobooks.jpg?s=612x612&w=0&k=20&c=EbRuxG_yedosFtRqROx2dWQ1w1mAYZVFXqzZTCuV6pU="}
               className="img-fluid animate__animated animate__fadeInRight"
-=======
-              src={audiobookimg}
-              className="img-fluid animate__animated animate__fadeInLeft"
->>>>>>> d707477270c87469d3c3602d012adcaf20b7d8aa
               width="540"
               height="356"
               alt="Photo"
