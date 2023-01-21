@@ -1,19 +1,35 @@
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import numpy as np
 from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 import networkx as nx
+import re
+import nltk
 
+
+
+def clean_punctuation(text):
+    """Remove punctuation from text"""
+    import string
+    return text.translate(str.maketrans('', '', string.punctuation))
 
 def read_article(file_name):
     file = open(file_name, "r")
     filedata = file.readlines()
-    article = filedata[0].split(". ")
-    sentences = []
+    filedata = [clean_punctuation(data.strip()) for data in filedata if len(data) > 1]
+    if len(filedata) == 1:
+        # print("filedata ->", filedata)
+        article = filedata[0].split(". ")
+        # print("article ->", article)
+    else:
+        article = filedata
 
+    sentences = []
     for sentence in article:
-        print(sentence)
+        # print(sentence)
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
-    sentences.pop() 
+    # sentences.pop() 
+    # sentences = [s.strip().replace('.','') for s in sentences]
     
     return sentences
 
@@ -55,14 +71,14 @@ def build_similarity_matrix(sentences, stop_words):
 
     return similarity_matrix
 
-
 def generate_summary(file_name, top_n=5):
+
     stop_words = stopwords.words('english')
     summarize_text = []
 
     # Step 1 - Read text anc split it
     sentences =  read_article(file_name)
-
+  # print(sentences)
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
 
@@ -72,12 +88,37 @@ def generate_summary(file_name, top_n=5):
 
     # Step 4 - Sort the rank and pick top sentences
     ranked_sentence = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)    
-    print("Indexes of top ranked_sentence order are ", ranked_sentence)    
-
+  # print("Indexes of top ranked_sentence order are ", ranked_sentence) 
+     
     for i in range(top_n):
-      summarize_text.append(" ".join(ranked_sentence[i][1]))
+        summarize_text.append(" ".join(ranked_sentence[i][1]))
 
-    # Step 5 - Offcourse, output the summarize texr
-    print("Summarize Text: \n", ". ".join(summarize_text))
+    # Step 5 - Offcourse, output the summarize text
+  # print("Summarize Text: \n", ". ".join(summarize_text))
+    return ". ".join(summarize_text)
 
+def get_para_sentiment(text):
+    nltk.download('vader_lexicon')
+    sid = SentimentIntensityAnalyzer()
+    paragraphs  = [t.strip() for t in text.split(".")]
+    result = []
+    for paragraph in paragraphs:
+        ss = sid.polarity_scores(paragraph)
+        result.append(ss)
+    return result
+    
 # let's begin
+if __name__ == "__main__":
+    out = generate_summary( r"C:\Users\ansar\OneDrive\Desktop\Text-O-Matic\data.txt", 2)
+    print(out)
+    print(get_para_sentiment(out))
+
+
+# from textblob import TextBlob
+# def get_sentiment(text):
+#     blob = TextBlob(text)
+#     return blob.sentiment.polarity
+
+# def get_subjectivity(text):
+#     blob = TextBlob(text)
+#     return blob.sentiment.subjectivity
