@@ -154,7 +154,7 @@ const Home = () => {
           <div className="container">
             <p className="display-4 text-center">Features</p>
 
-            <div className="card">
+            <div className="card" style={{ background: "#dff1ee" }}>
               <div className="card-body">
                 <div className="row">
                   <div className="col-md-4">
@@ -164,8 +164,8 @@ const Home = () => {
                       alt="Title"
                     />
                   </div>
-                  {/* <div className="col-md-8 d-flex flex-column justify-content-center"> */}
-                  <div className="col-md-8">
+                  <div className="col-md-8 d-flex flex-column justify-content-center">
+                  {/* <div className="col-md-8"> */}
                     <p className="display-2 fw-bold">Summary Generation</p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eos error sed beatae porro cumque voluptatum exercitationem
@@ -178,12 +178,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="card mt-4">
+            <div className="card mt-4 " style={{ background: "#dff1ee" }}>
               <div className="card-body">
                 <div className="row">
                   {/* <div className="col-md-8 d-flex flex-column justify-content-center"> */}
-                  <div className="col-md-8">
-                    <p className="display-2 fw-bold">Summary Generation</p>
+                  <div className="col-md-8 d-flex flex-column justify-content-center">
+                    <p className="display-2 fw-bold">Sentiment Analysis</p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eos error sed beatae porro cumque voluptatum exercitationem
                     ea animi maiores officiis repellat facilis, excepturi,
@@ -198,13 +198,37 @@ const Home = () => {
                       src="https://picsum.photos/501/500"
                       alt="Title"
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card mt-4" style={{ background: "#dff1ee" }}>
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-4">
+                    <img
+                      className="img-fluid"
+                      src="https://picsum.photos/501/500"
+                      alt="Title"
+                    />
+                  </div>
+                  <div className="col-md-8 d-flex flex-column justify-content-center">
+                  {/* <div className="col-md-8"> */}
+                    <p className="display-2 fw-bold">Summary Generation</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Eos error sed beatae porro cumque voluptatum exercitationem
+                    ea animi maiores officiis repellat facilis, excepturi,
+                    temporibus ad quae? Praesentium, inventore earum obcaecati
+                    fugit architecto ipsum vel pariatur nulla ex veritatis
+                    temporibus esse quisquam quos nostrum ratione totam
+                    doloribus, eligendi ducimus illo aliquid?
                   </div>
                 </div>
               </div>
             </div>
 
             <>
-              <section class="light">
+              {/* <section class="light">
                 <div class="container py-2">
                   <div
                     class="h1 text-center text-dark"
@@ -281,7 +305,7 @@ const Home = () => {
                     </div>
                   </article>
                 </div>
-              </section>
+              </section> */}
             </>
           </div>
         </div>
