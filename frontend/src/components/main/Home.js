@@ -2,6 +2,7 @@ import React from "react";
 import "./Style.css";
 import myimg from "./img/logonew.png";
 
+
 const Home = () => {
   return (
     <div>
@@ -21,7 +22,6 @@ const Home = () => {
             <a href="#" className="btn btn--outline">
               Learn more ↓
             </a>
-            
           </div>
           <div className="hero-img-box">
             <img
@@ -30,7 +30,9 @@ const Home = () => {
               alt="intelligent text analyzer"
             />
           </div>
-          <div id="features" className="col-row row">
+          {/* ////////////////////////////////////////////////// */}
+
+          {/* <div id="features" className="col-row row">
             <h1>Features</h1>
           </div>
           <div className="col-md-8 d-flex align-items-center">
@@ -66,10 +68,163 @@ const Home = () => {
                   <p>Download, save or share your summary for free.</p>
                 </div>
               </li>
-            </ul>
+            </ul> */}
+          {/* </div> */}
+        </div>
+      </section>
+
+      {/* ////////////////////////////////////////////////////////////////////// */}
+
+      <section>
+        <div style={{ background: "#dff1ee" }}>
+          <div className="container">
+            <br />
+            <p className="display-6  text-center "> Get started in minutes</p>
+            <p className="display-4 text-center ">
+              3 simple & easy step to launch.
+            </p>
+            <br />
+            <br />
+            <div className="row">
+              <div className="col-sm-4">
+                <div
+                  className="card w-80 animate__animated animate__slideInUp "
+                  style={{ background: "#dff1ee" }}
+                >
+                  <div className="card-body" style={{ transition: "1sec" }}>
+                    <img
+                      src="https://www.sammurize.com/images/assets/ils_15.svg"
+                      alt=""
+                      className="img-fluid  card-img-top "
+                    />
+                    <p>Join Our Platform</p>
+                    <p className=" fw-bold">
+                      It only takes a minute. <br /> Set up is smooth and simple
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-4">
+                <div
+                  className="card w-80 animate__animated animate__slideInUp"
+                  style={{ background: "#dff1ee" }}
+                >
+                  <div className="card-body">
+                    <img
+                      src="https://www.sammurize.com/images/assets/ils_16.svg"
+                      alt=""
+                      className="img-fluid  card-img-top"
+                    />
+                    <p>Create new research</p>
+                    <p className=" fw-bold">
+                      Create a new research and start gathering documents as pdf
+                      files or public URL article links
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-4">
+                <div
+                  className="card w-80 animate__animated animate__slideInUp"
+                  style={{ background: "#dff1ee" }}
+                >
+                  <div className="card-body">
+                    <img
+                      src="https://www.sammurize.com/images/assets/ils_07.svg"
+                      alt=" "
+                      width="100"
+                      className="img-fluid card-img-top"
+                    />
+                    <p>Start summarizing text</p>
+                    <p className=" fw-bold">
+                      Get detailed keywords and <br /> summarize main points{" "}
+                      <br /> for each document
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* /////////////////////// */}
+
+    
+      <section>
+        <div style={{ background: "#dff1ee" }}>
+          <div className="container">
+            <br />
+
+            <p className="display-4 text-center ">
+             Features
+            </p>
+            <br />
+            <br />
+            <>
+            <section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
+
+	
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">Summary Generation</a></h1>
+				<div class="postcard__subtitle small">
+					
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">Sentiment Analysis</a></h1>
+				<div class="postcard__subtitle small">
+					
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				
+			</div>
+		</article>
+		<article class="postcard light yellow">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title yellow"><a href="#">Text to Audio</a></h1>
+				<div class="postcard__subtitle small">
+				
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				
+			</div>
+		</article>
+	</div>
+</section>
+
+
+</>
+
+          </div>
+        </div>
+      </section>
+    
+    
+    
+    
+    
+    
+    
     </div>
   );
 };

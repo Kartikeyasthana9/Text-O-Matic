@@ -1,6 +1,7 @@
 import { Formik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
+import { MDBInput } from 'mdb-react-ui-kit';
 
 const Signup = () => {
   const userSubmit = async (formdata) => {
@@ -86,70 +87,54 @@ const Signup = () => {
                         <form onSubmit={handleSubmit}>
                           {/* 2 column grid layout with text inputs for the first and last names */}
                           <div className="row">
-                            <div className="col-md-6 mb-4">
-                              <div className="form-outline">
-                                <input
+                            <div className="col-md-6 ">
+                              <div className="form-outline mb-4">
+                                <MDBInput
                                   type="text"
                                   id="name"
+                                  label="Name"
                                   className="form-control"
                                   onChange={handleChange}
                                   value={values.name}
                                 />
-                                <label
-                                  className="form-label"
-                                  htmlFor="form3Example1"
-                                >
-                                  Name
-                                </label>
+                               
                               </div>
                             </div>
                           </div>
                           {/* Email input */}
                           <div className="form-outline mb-4">
-                            <input
+                            <MDBInput
                               type="email"
                               id="email"
+                              label="Email"
                               className="form-control"
                               onChange={handleChange}
                               value={values.email}
                             />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example3"
-                            >
-                              Email
-                            </label>
+                           
                           </div>
                           {/* Password input */}
                           <div className="form-outline mb-4">
-                            <input
+                            <MDBInput
                               type="password"
                               id="password"
+                              label="Password"
                               className="form-control"
                               onChange={handleChange}
                               value={values.password}
                             />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example4"
-                            >
-                              Password
-                            </label>
+                            
                           </div>
                           {/* phone number */}
                           <div className="form-outline mb-4">
-                            <input
+                            <MDBInput
                               id="number"
+                              label="Phone Number"
                               className="form-control"
                               onChange={handleChange}
                               value={values.number}
                             />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example3"
-                            >
-                              Phone Number
-                            </label>
+                            
                           </div>
 
                           {/* Submit button */}
