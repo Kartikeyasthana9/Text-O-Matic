@@ -172,7 +172,7 @@ const Home = () => {
 				<img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+				<h1 class="postcard__title red"><a href="#">Summary Generation</a></h1>
 				<div class="postcard__subtitle small">
 					
 				</div>
@@ -186,7 +186,7 @@ const Home = () => {
 				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+				<h1 class="postcard__title green"><a href="#">Sentiment Analysis</a></h1>
 				<div class="postcard__subtitle small">
 					
 				</div>
@@ -200,7 +200,7 @@ const Home = () => {
 				<img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+				<h1 class="postcard__title yellow"><a href="#">Text to Audio</a></h1>
 				<div class="postcard__subtitle small">
 				
 				</div>
