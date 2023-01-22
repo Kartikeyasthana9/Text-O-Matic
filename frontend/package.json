@@ -20,10 +20,14 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-router-dom": "^6.3.0",
+<<<<<<< HEAD
+    "react-scripts": "^5.0.1",
+=======
 
     "react-scripts": "^5.0.1",
 
  
+>>>>>>> 89b011e7742c36a27bb430db16b99f4c6e83e9bc
     "react-toast": "^1.0.3",
     "sweetalert2": "^11.6.5",
     "web-vitals": "^2.1.4"

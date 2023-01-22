@@ -18,9 +18,16 @@ async def create_file(file: bytes = File(...)):
 async def create_upload_file(file: UploadFile = File(...)):
     return {"filename": file.filename}
 
+# Create a route that excepts music files
+@app.post("/uploadmusicfile/")
+async def create_upload_music(file: UploadFile = File(...)):
+    return {"filename": file.filename}
+
 # create a api route that summarizes the text str 
-@app.get("/textomatic/api/v1/summarize")
-def summarize_text(text: str = Form(...)):
+
+
+@app.post("/textomatic/api/v1/summarize/text")
+async def summarize_text(text: str = Form(...)):
     try:
         with open('temp.txt', 'w') as f:
             f.write(text)
@@ -34,7 +41,7 @@ def summarize_text(text: str = Form(...)):
 
 # create an api route that summarizes the file after getting text from the file
 @app.post("/textomatic/api/v1/summarize")
-async def summarize_text(file: UploadFile = File(...)):
+async def summarize_file(file: UploadFile = File(...)):
     try:
         summary = smz.generate_summary(file)
         return {'summary': summary, 
@@ -44,4 +51,10 @@ async def summarize_text(file: UploadFile = File(...)):
         return {'error': str(e), 'status': 'failed'}
 
 
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
