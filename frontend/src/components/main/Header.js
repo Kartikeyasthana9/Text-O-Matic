@@ -42,7 +42,7 @@ const Header = () => {
                   loading="lazy"
                 />
               </div>
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5  ">
+              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5  ">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/main/home">
                     Home

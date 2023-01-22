@@ -2,7 +2,6 @@ import React from "react";
 import "./Style.css";
 import myimg from "./img/logonew.png";
 
-
 const Home = () => {
   return (
     <div>
@@ -150,81 +149,143 @@ const Home = () => {
 
       {/* /////////////////////// */}
 
-    
       <section>
         <div style={{ background: "#dff1ee" }}>
           <div className="container">
-            <br />
+            <p className="display-4 text-center">Features</p>
 
-            <p className="display-4 text-center ">
-             Features
-            </p>
-            <br />
-            <br />
+            <div className="card">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-4">
+                    <img
+                      className="img-fluid"
+                      src="https://picsum.photos/501/500"
+                      alt="Title"
+                    />
+                  </div>
+                  {/* <div className="col-md-8 d-flex flex-column justify-content-center"> */}
+                  <div className="col-md-8">
+                    <p className="display-2 fw-bold">Summary Generation</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Eos error sed beatae porro cumque voluptatum exercitationem
+                    ea animi maiores officiis repellat facilis, excepturi,
+                    temporibus ad quae? Praesentium, inventore earum obcaecati
+                    fugit architecto ipsum vel pariatur nulla ex veritatis
+                    temporibus esse quisquam quos nostrum ratione totam
+                    doloribus, eligendi ducimus illo aliquid?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card mt-4">
+              <div className="card-body">
+                <div className="row">
+                  {/* <div className="col-md-8 d-flex flex-column justify-content-center"> */}
+                  <div className="col-md-8">
+                    <p className="display-2 fw-bold">Summary Generation</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Eos error sed beatae porro cumque voluptatum exercitationem
+                    ea animi maiores officiis repellat facilis, excepturi,
+                    temporibus ad quae? Praesentium, inventore earum obcaecati
+                    fugit architecto ipsum vel pariatur nulla ex veritatis
+                    temporibus esse quisquam quos nostrum ratione totam
+                    doloribus, eligendi ducimus illo aliquid?
+                  </div>
+                  <div className="col-md-4">
+                    <img
+                      className="img-fluid"
+                      src="https://picsum.photos/501/500"
+                      alt="Title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <>
-            <section class="light">
-	<div class="container py-2">
-		<div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
+              <section class="light">
+                <div class="container py-2">
+                  <div
+                    class="h1 text-center text-dark"
+                    id="pageHeaderTitle"
+                  ></div>
 
-	
-		<article class="postcard light red">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title red"><a href="#">Summary Generation</a></h1>
-				<div class="postcard__subtitle small">
-					
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-				
-			</div>
-		</article>
-		<article class="postcard light green">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title green"><a href="#">Sentiment Analysis</a></h1>
-				<div class="postcard__subtitle small">
-					
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-				
-			</div>
-		</article>
-		<article class="postcard light yellow">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title yellow"><a href="#">Text to Audio</a></h1>
-				<div class="postcard__subtitle small">
-				
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-				
-			</div>
-		</article>
-	</div>
-</section>
-
-
-</>
-
+                  <article class="postcard light red">
+                    <a class="postcard__img_link" href="#"></a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title red">
+                        <a href="#">Summary Generation</a>
+                      </h1>
+                      <div class="postcard__subtitle small"></div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi, fugiat asperiores inventore beatae accusamus
+                        odit minima enim, commodi quia, doloribus eius! Ducimus
+                        nemo accusantium maiores velit corrupti tempora
+                        reiciendis molestiae repellat vero. Eveniet ipsam
+                        adipisci illo iusto quibusdam, sunt neque nulla unde
+                        ipsum dolores nobis enim quidem excepturi, illum quos!
+                      </div>
+                    </div>
+                  </article>
+                  <article class="postcard light green">
+                    <a class="postcard__img_link" href="#">
+                      <img
+                        class="postcard__img"
+                        src="https://picsum.photos/500/501"
+                        alt="Image Title"
+                      />
+                    </a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title green">
+                        <a href="#">Sentiment Analysis</a>
+                      </h1>
+                      <div class="postcard__subtitle small"></div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi, fugiat asperiores inventore beatae accusamus
+                        odit minima enim, commodi quia, doloribus eius! Ducimus
+                        nemo accusantium maiores velit corrupti tempora
+                        reiciendis molestiae repellat vero. Eveniet ipsam
+                        adipisci illo iusto quibusdam, sunt neque nulla unde
+                        ipsum dolores nobis enim quidem excepturi, illum quos!
+                      </div>
+                    </div>
+                  </article>
+                  <article class="postcard light yellow">
+                    <a class="postcard__img_link" href="#">
+                      <img
+                        class="postcard__img"
+                        src="https://picsum.photos/501/501"
+                        alt="Image Title"
+                      />
+                    </a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title yellow">
+                        <a href="#">Text to Audio</a>
+                      </h1>
+                      <div class="postcard__subtitle small"></div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi, fugiat asperiores inventore beatae accusamus
+                        odit minima enim, commodi quia, doloribus eius! Ducimus
+                        nemo accusantium maiores velit corrupti tempora
+                        reiciendis molestiae repellat vero. Eveniet ipsam
+                        adipisci illo iusto quibusdam, sunt neque nulla unde
+                        ipsum dolores nobis enim quidem excepturi, illum quos!
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </>
           </div>
         </div>
       </section>
-    
-    
-    
-    
-    
-    
-    
     </div>
   );
 };
