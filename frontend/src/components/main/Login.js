@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
 import Swal from "sweetalert2";
+import { MDBInput } from 'mdb-react-ui-kit';
 import {useNavigate } from "react-router-dom";
 
 
@@ -99,36 +100,28 @@ const Login = () => {
                           <div className="row"></div>
                           {/* Email input */}
                           <div className="form-outline mb-4">
-                            <input
+                            <MDBInput
                               type="email"
                               id="email"
+                              label=" Email Address"
                               className="form-control form-control-lg"
                               value={values.email}
                               onChange={handleChange}
                             />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example3cg"
-                            >
-                              Email Address
-                            </label>
+                           
                           </div>
                           {/* Password input */}
 
                           <div className="form-outline mb-4">
-                            <input
+                            <MDBInput
                               type="password"
                               id="password"
+                              label="Password"
                               className="form-control form-control-lg"
                               value={values.password}
                               onChange={handleChange}
                             />
-                            <label
-                              className="form-label"
-                              htmlFor="form2Example17"
-                            >
-                              Password
-                            </label>
+                            
                           </div>
 
                           {/* Submit button */}
