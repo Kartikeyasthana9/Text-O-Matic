@@ -63,7 +63,7 @@ const summarizeText = async () => {
 
       {/* ////////////////////////////////////////////////////////////////// */}
 
-      <div style={{ background: "#dff1ee" }}>
+      {/* <div style={{ background: "#dff1ee" }}>
         <div className="container">
           <br />
           <p className="display-6  text-center "> Get started in minutes</p>
@@ -132,7 +132,7 @@ const summarizeText = async () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ///////////////////////////////// */}
 
