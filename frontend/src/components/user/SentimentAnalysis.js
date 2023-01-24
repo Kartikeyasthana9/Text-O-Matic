@@ -2,6 +2,7 @@ import React from 'react'
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
+import myimg2 from "./images/sentiment.png"
 
 const SentimentAnalysis = () => {
   return (
@@ -25,7 +26,7 @@ const SentimentAnalysis = () => {
          </div>
          <div>
             <img
-              src="https://infra-cloudfront-talkdeskcom.svc.talkdeskapp.com/talkdesk_com/sentiment-analysis-435x290.png"
+              src={myimg2}
               className="img-fluid animate__animated animate__fadeInRight"
               width="540"
               height="356"

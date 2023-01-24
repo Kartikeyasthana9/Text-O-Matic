@@ -32,44 +32,21 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link  fw-bold" href="#">
-                  Link
+                <a className="nav-link  fw-bold" href="/user/summarizer">
+                  Summarizer
                 </a>
               </li>
-              {/* Navbar dropdown */}
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle  fw-bold"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
+              <li className="nav-item">
+                <a className="nav-link  fw-bold" href="/user/sentiment">
+                  Sentiement Analysis
                 </a>
-                {/* Dropdown menu */}
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
               </li>
+              <li className="nav-item">
+                <a className="nav-link  fw-bold" href="/user/audiobook">
+                  Audiobook
+                </a>
+              </li>
+             
             </ul>
             {/* Left links */}
           </div>
