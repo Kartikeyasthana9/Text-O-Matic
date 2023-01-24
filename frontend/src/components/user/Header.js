@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <div>
@@ -27,7 +28,11 @@ const Header = () => {
             {/* Left links */}
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link fw-bold" aria-current="page" to="/main/home">
+                <NavLink
+                  className="nav-link fw-bold"
+                  aria-current="page"
+                  to="/main/home"
+                >
                   Home
                 </NavLink>
               </li>
@@ -36,6 +41,7 @@ const Header = () => {
                   Summarizer
                 </a>
               </li>
+<<<<<<< HEAD
               <li className="nav-item">
                 <a className="nav-link  fw-bold" href="/user/sentiment">
                   Sentiement Analysis
@@ -47,9 +53,12 @@ const Header = () => {
                 </a>
               </li>
              
+=======
+>>>>>>> 7d5c1b01e7b37fd151dc0646b82c4fe502c9beb2
             </ul>
             {/* Left links */}
           </div>
+                      
           {/* Collapsible wrapper */}
         </div>
         {/* Container wrapper */}

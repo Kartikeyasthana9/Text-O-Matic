@@ -24,8 +24,6 @@ async def create_upload_music(file: UploadFile = File(...)):
     return {"filename": file.filename}
 
 # create a api route that summarizes the text str 
-
-
 @app.post("/textomatic/api/v1/summarize/text")
 async def summarize_text(text: str = Form(...)):
     try:
@@ -51,9 +49,6 @@ async def summarize_file(file: UploadFile = File(...)):
         return {'error': str(e), 'status': 'failed'}
 
     
-
-
-
 
 
 if __name__ == "__main__":

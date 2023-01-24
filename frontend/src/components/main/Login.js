@@ -33,7 +33,7 @@ const Login = () => {
         navigate("/admin/profile");
       }else{
         sessionStorage.setItem("user", JSON.stringify(data));
-        navigate("/main/home");
+        navigate("/user/summarizer");
       }
 
     } else if (response.status === 401) {
