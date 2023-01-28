@@ -87,11 +87,17 @@ def generate_summary(file_name, top_n=5):
     scores = nx.pagerank(sentence_similarity_graph)
 
     # Step 4 - Sort the rank and pick top sentences
-    ranked_sentence = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)    
+    ranked_sentence = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)  
+    print(ranked_sentence)
+
+    print(len(ranked_sentence))  
   # print("Indexes of top ranked_sentence order are ", ranked_sentence) 
-     
-    for i in range(top_n):
-        summarize_text.append(" ".join(ranked_sentence[i][1]))
+    if top_n > len(ranked_sentence):
+        for i in range(top_n):
+            summarize_text.append(" ".join(ranked_sentence[i][1]))
+    else:
+        for i in range(len(ranked_sentence)):
+            summarize_text.append(" ".join(ranked_sentence[i][1]))
 
     # Step 5 - Offcourse, output the summarize text
   # print("Summarize Text: \n", ". ".join(summarize_text))
