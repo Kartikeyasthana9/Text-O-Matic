@@ -109,7 +109,7 @@ def get_para_sentiment(text):
     
 # let's begin
 if __name__ == "__main__":
-    out = generate_summary( r"C:\Users\ansar\OneDrive\Desktop\Text-O-Matic\data.txt", 2)
+    out = generate_summary( r"C:\Users\PC\Desktop\Text-O-Matic\data.txt", 2)
     print(out)
     print(get_para_sentiment(out))
 
