@@ -167,7 +167,7 @@ const Home = () => {
                   </div>
                   <div className="col-md-8 d-flex flex-column justify-content-center">
                   {/* <div className="col-md-8"> */}
-                    <p className="display-2 fw-bold">Summary Generation</p>
+                    <p className="display-4 fw-bold">Summary Generation</p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eos error sed beatae porro cumque voluptatum exercitationem
                     ea animi maiores officiis repellat facilis, excepturi,
@@ -184,7 +184,7 @@ const Home = () => {
                 <div className="row">
                   {/* <div className="col-md-8 d-flex flex-column justify-content-center"> */}
                   <div className="col-md-8 d-flex flex-column justify-content-center">
-                    <p className="display-2 fw-bold">Sentiment Analysis</p>
+                    <p className="display-4 fw-bold">Sentiment Analysis</p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eos error sed beatae porro cumque voluptatum exercitationem
                     ea animi maiores officiis repellat facilis, excepturi,
@@ -215,7 +215,7 @@ const Home = () => {
                   </div>
                   <div className="col-md-8 d-flex flex-column justify-content-center">
                   {/* <div className="col-md-8"> */}
-                    <p className="display-2 fw-bold">Summary Generation</p>
+                    <p className="display-4 fw-bold">Text To Audio</p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eos error sed beatae porro cumque voluptatum exercitationem
                     ea animi maiores officiis repellat facilis, excepturi,

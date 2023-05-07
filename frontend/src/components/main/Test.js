@@ -1,122 +1,144 @@
-import React from 'react'
+import React from "react";
 
 const Test = () => {
   return (
     <div>
-        <>
-  {/*Main Navigation*/}
-  <header>
-    {/* Navbar */}
-    <nav
-      id="main-navbar"
-      className="navbar navbar-expand-lg navbar-light bg-white"
-    >
-      {/* Container wrapper */}
-      <div className="container-fluid">
-        {/* Search form */}
-        <form className="d-none d-md-flex input-group w-auto my-auto">
-          <input
-            autoComplete="off"
-            type="search"
-            className="form-control rounded"
-            placeholder='Search (ctrl + "/" to focus)'
-            style={{ minWidth: 225 }}
-          />
-          <span className="input-group-text border-0">
-            <i className="fas fa-search" />
-          </span>
-        </form>
-        {/* Right links */}
-        <ul className="navbar-nav ms-auto d-flex flex-row">
-          {/* Notification dropdown */}
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
+      {/* ////////////////////////// */}
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 className="mb-5">Contact For Any Query</h1>
+          </div>
+          <div className="row g-4">
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
             >
-              <i className="fas fa-bell" />
-              <span className="badge rounded-pill badge-notification bg-danger">
-                1
-              </span>
-            </a>
-            <ul
-              className="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdownMenuLink"
+              <h4>Get In Touch</h4>
+              <p className="mb-4  ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                cumque ipsum unde laudantium repudiandae, nihil obcaecati. Saepe
+                vero ut quod error magnam provident eveniet cumque, nam ex, sed
+                illo nisi.
+              </p>
+              <div className="d-flex align-items-center mb-3">
+                <div
+                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                  style={{ width: 50, height: 50 }}
+                >
+                  <i className="fa fa-map-marker-alt text-white" />
+                </div>
+                <div className="ms-3">
+                  <h5 className="text-primary">Office</h5>
+                  <p className="mb-0 fw-bold">123 Street, Lucknow, India</p>
+                </div>
+              </div>
+              <div className="d-flex align-items-center mb-3">
+                <div
+                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                  style={{ width: 50, height: 50 }}
+                >
+                  <i className="fa fa-phone-alt text-white" />
+                </div>
+                <div className="ms-3">
+                  <h5 className="text-primary">Mobile</h5>
+                  <p className="mb-0 fw-bold">+012 345 67890</p>
+                </div>
+              </div>
+              <div className="d-flex align-items-center">
+                <div
+                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                  style={{ width: 50, height: 50 }}
+                >
+                  <i className="fa fa-envelope-open text-white" />
+                </div>
+                <div className="ms-3">
+                  <h5 className="text-primary">Email</h5>
+                  <p className="mb-0 fw-bold"  >textautomatic@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.3s"
             >
-              <li>
-                <a className="dropdown-item" href="#">
-                  Some news
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another news
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
-          </li>
-          {/* Icon dropdown */}
-        
-          {/* Avatar */}
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/avatars/2.jpg"
-                className="rounded-circle"
-                height={35}
-                alt="Avatar"
-                loading="lazy"
+              <iframe
+                className="position-relative rounded w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                frameBorder={0}
+                style={{ minHeight: 300, border: 0 }}
+                allowFullScreen=""
+                aria-hidden="false"
+                tabIndex={0}
               />
-            </a>
-            <ul
-              className="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdownMenuLink"
+            </div>
+            <div
+              className="col-lg-4 col-md-12 wow fadeInUp"
+              data-wow-delay="0.5s"
             >
-              <li>
-                <a className="dropdown-item" href="#">
-                  My profile
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Settings
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              <form>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label htmlFor="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-floating">
+                      <input
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        placeholder="Your Email"
+                      />
+                      <label htmlFor="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="subject"
+                        placeholder="Subject"
+                      />
+                      <label htmlFor="subject">Subject</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="form-floating">
+                      <textarea
+                        className="form-control"
+                        placeholder="Leave a message here"
+                        id="message"
+                        style={{ height: 150 }}
+                        defaultValue={""}
+                      />
+                      <label htmlFor="message">Message</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <button
+                      className="btn btn-primary w-100 py-3"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      {/* Container wrapper */}
-    </nav>
-    {/* Navbar */}
-   
-  </header>
-  {/*Main Navigation*/}
-</>
-
     </div>
-  )
-}
+  );
+};
 
-export default Test
+export default Test;
