@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "animate.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
 
 const Summarizer = () => {
-
   const [selFile, setSelFile] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const inputRef = useRef();
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -15,20 +16,21 @@ const Summarizer = () => {
     setSelFile(file.name);
     const fd = new FormData();
     fd.append("myfile", file);
-    console.log('uploading File ...');
-
+    console.log("uploading File ...");
 
     fetch("http://localhost:5000/util/uploadfile", {
-        method: "POST",
-        body: fd,
+      method: "POST",
+      body: fd,
     }).then(async (res) => {
-        console.log(res.status);
+      console.log(res.status);
     });
-};
+  };
 
-const summarizeText = async () => {
-  const res= await fetch('http://localhost:8000/textomatic/api/v1/summarize')
-}
+  const summarizeText = async () => {
+    const res = await fetch(
+      "http://localhost:8000/textomatic/api/v1/summarize"
+    );
+  };
 
   return (
     <div>
@@ -133,9 +135,7 @@ const summarizeText = async () => {
           </div>
         </div>
       </div> */}
-
-      {/* ///////////////////////////////// */}
-
+      
       <div style={{ background: "#dff1ee" }}>
         <div className="container ">
           <div className="card">
@@ -154,11 +154,24 @@ const summarizeText = async () => {
                 variant="filled"
                 fullWidth
                 sx={{ m: 1 }}
+                ref={inputRef}
+
               />
-              <label className="btn btn-primary" htmlFor="upload-doc" onChange={uploadFile}>
+              <button className="btn btn-primary" onClick={summarizeText}>Summarize</button>
+              <label
+                className="btn btn-primary"
+                htmlFor="upload-doc"
+                onChange={uploadFile}
+              >
                 <i class="fas fa-upload"></i>&nbsp; Upload
-              </label>  
-                <input id="upload-doc" hidden accept="document/*" type="file" onChange={uploadFile} />
+              </label>
+              <input
+                id="upload-doc"
+                hidden
+                accept="document/*"
+                type="file"
+                onChange={uploadFile}
+              />
 
               <Fab
                 variant="extended"
@@ -175,7 +188,6 @@ const summarizeText = async () => {
       </div>
 
       {/* //////////////////////////////////////////////// */}
-
     </div>
   );
 };
