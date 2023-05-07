@@ -41,6 +41,16 @@ const Header = () => {
                   Summarizer
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link  fw-bold" href="/user/audiobook">
+                  Audiobook
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link  fw-bold" href="/user/sentiment">
+                  Sentiment Analysis
+                </a>
+              </li>
             </ul>
             {/* Left links */}
             

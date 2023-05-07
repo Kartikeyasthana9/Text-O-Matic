@@ -1,6 +1,7 @@
 import React from "react";
 import "./Style.css";
 import myimg from "./img/logonew.png";
+import myaudiobook from "./img/audiobook.png";
 
 const Home = () => {
   return (
@@ -160,7 +161,7 @@ const Home = () => {
                   <div className="col-md-4">
                     <img
                       className="img-fluid"
-                      src="https://picsum.photos/501/500"
+                      src="https://play-lh.googleusercontent.com/UM9Ibkkqp304zSfGwTAWPyaM4-mUq5gc9EiNEtqS50dV-qblidxmx1I_eJZnEpAV77w=w600-h300-pc0xffffff-pd"
                       alt="Title"
                     />
                   </div>
@@ -195,7 +196,7 @@ const Home = () => {
                   <div className="col-md-4">
                     <img
                       className="img-fluid"
-                      src="https://picsum.photos/501/500"
+                      src="https://yellow.ai/wp-content/uploads/2022/01/customer-sentiment-analysis.svg"
                       alt="Title"
                     />
                   </div>
@@ -208,7 +209,7 @@ const Home = () => {
                   <div className="col-md-4">
                     <img
                       className="img-fluid"
-                      src="https://picsum.photos/501/500"
+                      src={myaudiobook}
                       alt="Title"
                     />
                   </div>

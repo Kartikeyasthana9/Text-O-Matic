@@ -17,4 +17,4 @@ mongoose.connect(url)
 module.exports = mongoose;
 
 // 1. Asynchronous - simultaneously
-// 2. Synchronous - one by one task
+// 2. Synchronous - one by one task
