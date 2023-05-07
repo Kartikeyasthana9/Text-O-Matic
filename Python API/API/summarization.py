@@ -94,7 +94,14 @@ def generate_summary(file_name, top_n=5):
   # print("Indexes of top ranked_sentence order are ", ranked_sentence) 
     if top_n > len(ranked_sentence):
         for i in range(top_n):
-            summarize_text.append(" ".join(ranked_sentence[i][1]))
+            try:
+                if len(ranked_sentence) > 1:
+                    datalist= ranked_sentence[i][1]
+                    print("data",datalist)
+                    summarize_text.append(" ".join(datalist))
+            except:
+                print(ranked_sentence[i])
+                print('skip')
     else:
         for i in range(len(ranked_sentence)):
             summarize_text.append(" ".join(ranked_sentence[i][1]))

@@ -35,24 +35,23 @@ async def create_upload_music(file: UploadFile = File(...)):
 # create a api route that summarizes the text str 
 @app.post("/textomatic/api/v1/summarize/text")
 async def summarize_text(text: str = Form(...)):
-    
-        with open('temp.txt', 'w') as f:
-            f.write(text)
-        summary = smz.generate_summary('temp.txt')
-        return {'summary': summary,
-                'summary_length': len(summary),
-                'status': 'success'}
+    file = open("../uploads/text.txt", "w")
+    file.write(text)
+    file.close()
+    summary = smz.generate_summary('../uploads/text.txt',2)
+    return {'summary': summary,
+            'summary_length': len(summary),
+            'status': 'success'}
 
 # create an api route that summarizes the file after getting text from the file
 @app.post("/textomatic/api/v1/summarize")
-async def summarize_file(file: UploadFile = File(...)):
-    try:
-        summary = smz.generate_summary(file)
-        return {'summary': summary, 
-                'summary_length': len(summary),
-                'status': 'success'}
-    except Exception as e:
-        return {'error': str(e), 'status': 'failed'}
+async def summarize(file: UploadFile = File(...)):
+    save_file(file, path="../uploads")
+    summary = smz.generate_summary('../uploads/'+file.filename,2)
+    return {'summary': summary,
+            'summary_length': len(summary),
+            'status': 'success'}
+
 
     
 
