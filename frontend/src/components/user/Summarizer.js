@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "animate.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -7,6 +7,8 @@ import Fab from "@mui/material/Fab";
 const Summarizer = () => {
   const [selFile, setSelFile] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const inputRef = useRef();
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -168,9 +170,7 @@ const Summarizer = () => {
           </div>
         </div>
       </div> */}
-
-      {/* ///////////////////////////////// */}
-
+      
       <div style={{ background: "#dff1ee" }}>
         <div className="container ">
           <div className="card">
@@ -189,7 +189,13 @@ const Summarizer = () => {
                 variant="filled"
                 fullWidth
                 sx={{ m: 1 }}
+                ref={inputRef}
+
               />
+<<<<<<< HEAD
+=======
+              <button className="btn btn-primary" onClick={summarizeText}>Summarize</button>
+>>>>>>> 2da9e3e163ead5ba7b0f7b4ebbfa0645f938fdd6
               <label
                 className="btn btn-primary"
                 htmlFor="upload-doc"
