@@ -36,12 +36,13 @@ def extract_text_from_pdf(path):
 
 def text_to_speech(text):
     engine = pyttsx3.init()
+    engine.setProperty('rate',150)
     engine.say(text)
     engine.runAndWait()
 
 def convert_pdf_to_audio(pdf_path):
     text = extract_text_from_pdf(pdf_path)
-    for page in text:
+    for page in text: 
         text_to_speech(page['text'])
 
     
@@ -52,5 +53,5 @@ def save_as_audio_file(path, file_name):
     engine.runAndWait()
 
 if __name__ == '__main__':
-    book= r"C:\Users\ansar\Downloads\Untitled document (8).pdf"
+    book= r"C:\Users\PC\Documents\sample.pdf"
     save_as_audio_file(book, 'book.mp3')

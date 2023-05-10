@@ -14,7 +14,7 @@ const Footer = () => {
         >
           © 2022 Copyright:
           <a className="text-white" href="https://mdbootstrap.com/">
-            Text-o-matic.com
+            Text-O-Matic.com
           </a>
         </div>
         {/* Copyright */}

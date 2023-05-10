@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import navlogo from "./img/navlogo.png";
 
 const Header = () => {
-  
   return (
     <div>
       <>
@@ -48,19 +47,43 @@ const Header = () => {
                     Home
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/user/summarizer">
-                    Summmarizer
-                  </NavLink>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <li>
+                      <NavLink className="dropdown-item" to="/user/summarizer">
+                        Summmarizer{" "}
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="dropdown-item" to="/user/sentiment">
+                        Sentiment Analysis
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="dropdown-item" to="/user/audiobook">
+                        Audiobook
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
+
+               
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/user/sentiment">
-                    Sentiment Analysis
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/user/audiobook">
-                    Audiobook
+                  <NavLink className="nav-link" to="/main/contactus">
+                    Contact Us
                   </NavLink>
                 </li>
               </ul>
