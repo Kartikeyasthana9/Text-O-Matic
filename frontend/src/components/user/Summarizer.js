@@ -7,6 +7,7 @@ import Fab from "@mui/material/Fab";
 const Summarizer = () => {
   const [selFile, setSelFile] = useState("");
   const [loading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   const inputRef = useRef();
 
@@ -27,9 +28,23 @@ const Summarizer = () => {
   };
 
   const summarizeText = async () => {
-    const res = await fetch(
-      "http://localhost:8000/textomatic/api/v1/summarize"
-    );
+    console.log(inputValue)
+    const res = await fetch("http://localhost:8000/textomatic/api/v1/summarize/text", {
+      method: "POST",
+      body: `text=${inputValue}`,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      }
+    });
+
+    console.log(res.status);
+
+    if(res.status === 200){
+      const data = await res.json();
+
+      console.log(data);
+    }
+
   };
 
   return (
@@ -70,13 +85,10 @@ const Summarizer = () => {
               className="mb-5 display-3 fw-bold ls-tight"
               style={{ color: "hsl(218, 81%, 95%)" }}
             >
-              
-              <span style={{ color: "hsl(218, 81%, 75%)" }}>
-                Summmarizer
-              </span>
+              <span style={{ color: "hsl(218, 81%, 75%)" }}>Summmarizer</span>
             </h1>
             <p className="text-dark lead mb-xl-0">
-            A text summarizer is an online tool that wraps up a text to a
+              A text summarizer is an online tool that wraps up a text to a
               specified short length. It condenses a long article to main
               points. The need for text summarizers is increasing day by day,
               because of time constraints. People are looking for shortcut
@@ -89,7 +101,6 @@ const Summarizer = () => {
             <div className="ratio ratio-16x9">
               <iframe
                 src="https://sassbook.com/images/sb_story_writer_card.svg"
-               
                 className=" img-fluid animate__animated animate__fadeInRight"
                 allowFullScreen=""
               />
@@ -170,7 +181,7 @@ const Summarizer = () => {
           </div>
         </div>
       </div> */}
-      
+
       <div style={{ background: "#dff1ee" }}>
         <div className="container ">
           <div className="card">
@@ -189,13 +200,11 @@ const Summarizer = () => {
                 variant="filled"
                 fullWidth
                 sx={{ m: 1 }}
-                ref={inputRef}
-
+                onChange={e => setInputValue(e.target.value)}
               />
-<<<<<<< HEAD
-=======
-              <button className="btn btn-primary" onClick={summarizeText}>Summarize</button>
->>>>>>> 2da9e3e163ead5ba7b0f7b4ebbfa0645f938fdd6
+              <button className="btn btn-primary" onClick={summarizeText}>
+                Summarize
+              </button>
               <label
                 className="btn btn-primary"
                 htmlFor="upload-doc"

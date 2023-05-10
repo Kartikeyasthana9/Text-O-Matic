@@ -42,7 +42,6 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-<<<<<<< HEAD
                 <a className="nav-link  fw-bold" href="/user/sentiment">
                   SentimentAnalysis
                 </a>
@@ -50,15 +49,6 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link  fw-bold" href="/user/audiobook">
                   AudioBook
-=======
-                <a className="nav-link  fw-bold" href="/user/audiobook">
-                  Audiobook
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link  fw-bold" href="/user/sentiment">
-                  Sentiment Analysis
->>>>>>> 2da9e3e163ead5ba7b0f7b4ebbfa0645f938fdd6
                 </a>
               </li>
             </ul>
