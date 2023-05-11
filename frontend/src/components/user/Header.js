@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+      <nav className="navbar navbar-expand-lg navbar-light ">
         {/* Container wrapper */}
         <div className="container-fluid">
           {/* Toggle button */}
@@ -42,13 +42,13 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link  fw-bold" href="/user/audiobook">
-                  Audiobook
+                <a className="nav-link  fw-bold" href="/user/sentiment">
+                  SentimentAnalysis
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link  fw-bold" href="/user/sentiment">
-                  Sentiment Analysis
+                <a className="nav-link  fw-bold" href="/user/audiobook">
+                  AudioBook
                 </a>
               </li>
             </ul>

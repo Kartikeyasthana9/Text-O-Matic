@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className=" text-center text-white fixed-bottom"  style={{ background: "#39373b" }}>
+      <footer className=" text-center text-white "  style={{ background: "#39373b" }}>
         {/* Grid container */}
        
         {/* Grid container */}
@@ -14,7 +14,7 @@ const Footer = () => {
         >
           © 2022 Copyright:
           <a className="text-white" href="https://mdbootstrap.com/">
-            Text-o-matic.com
+            Text-O-Matic.com
           </a>
         </div>
         {/* Copyright */}
