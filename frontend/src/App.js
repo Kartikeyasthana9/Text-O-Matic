@@ -64,7 +64,7 @@ function App() {
             <Route path="audiobook" element={<AudioBook />} />
           </Route>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </BrowserRouter>
     </div>
   );

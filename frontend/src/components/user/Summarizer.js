@@ -35,13 +35,23 @@ const Summarizer = () => {
   return (
     <div>
       <header className="bg-secondary">
-        <div className="container">
+        <div className="container py-4">
           <p className="display-2 text-center fw-bold text-white ">
             Summarizer
           </p>
-
-          <div class="header-text-box">
-            <p class="text-center fw-bold">
+          <div className="row">
+            <div className="col-md-6">
+            <img
+              src="https://sassbook.com/images/sb_story_writer_card.svg"
+              className="img-fluid animate__animated animate__fadeInRight"
+              width="540"
+              
+              height="356"
+              alt="Photo"
+            />
+            </div>
+            <div className="col-md-6 py-5">
+            <p class="h4">
               A text summarizer is an online tool that wraps up a text to a
               specified short length. It condenses a long article to main
               points. The need for text summarizers is increasing day by day,
@@ -50,15 +60,7 @@ const Summarizer = () => {
               helping them to decide whether a book, a research paper, or an
               article is worth reading or not.
             </p>
-          </div>
-          <div>
-            <img
-              src="https://sassbook.com/images/sb_story_writer_card.svg"
-              className="img-fluid animate__animated animate__fadeInRight"
-              width="540"
-              height="356"
-              alt="Photo"
-            />
+            </div>
           </div>
         </div>
       </header>
@@ -135,7 +137,7 @@ const Summarizer = () => {
           </div>
         </div>
       </div> */}
-      
+
       <div style={{ background: "#dff1ee" }}>
         <div className="container ">
           <div className="card">
