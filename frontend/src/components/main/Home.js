@@ -26,7 +26,7 @@ const Home = () => {
           <div className="hero-img-box">
             <img
               src={myimg}
-              className="hero-img img-fluid animate__animated animate__pulse"
+              className="hero-img img-fluid animate_animated animate_pulse"
               alt="intelligent text analyzer"
             />
           </div>
@@ -88,7 +88,7 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-4">
                 <div
-                  className="card w-80 animate__animated animate__slideInUp "
+                  className="card w-80 animate_animated animate_slideInUp "
                   style={{ background: "#dff1ee" }}
                 >
                   <div className="card-body" style={{ transition: "1sec" }}>
@@ -106,7 +106,7 @@ const Home = () => {
               </div>
               <div className="col-sm-4">
                 <div
-                  className="card w-80 animate__animated animate__slideInUp"
+                  className="card w-80 animate_animated animate_slideInUp"
                   style={{ background: "#dff1ee" }}
                 >
                   <div className="card-body">
@@ -125,7 +125,7 @@ const Home = () => {
               </div>
               <div className="col-sm-4">
                 <div
-                  className="card w-80 animate__animated animate__slideInUp"
+                  className="card w-80 animate_animated animate_slideInUp"
                   style={{ background: "#dff1ee" }}
                 >
                   <div className="card-body">
