@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import navlogo from "./img/navlogo.png";
 
 const Header = () => {
-  
   return (
     <div>
       <>
@@ -36,14 +35,11 @@ const Header = () => {
                     Summmarizer
                   </NavLink>
                 </li>
+
+               
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/user/sentiment">
-                    Sentiment Analysis
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/user/audiobook">
-                    Audiobook
+                  <NavLink className="nav-link" to="/main/contactus">
+                    Contact Us
                   </NavLink>
                 </li>
           

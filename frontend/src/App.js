@@ -24,6 +24,7 @@ import UserAuth from "./components/UserAuth";
 import AdminAuth from "./components/AdminAuth";
 import Footer from "./components/main/Footer";
 import Test from "./components/main/Test";
+import ContactUs from "./components/main/ContactUs";
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
         
             <Route path="signup" element={<Signup />} />
             <Route path="test" element={<Test />} />
+            <Route path="contactus" element={<ContactUs />} />
+
            
           </Route>
 
