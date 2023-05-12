@@ -1,13 +1,17 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/main/Login";
+
 import Signup from "./components/main/Signup";
 import AdminProfile from "./components/admin/Profile";
 import UserProfile from "./components/user/UserProfile";
 import Header from "./components/main/Header";
+
 import Main from "./components/main";
 import User from "./components/user";
 
 import Home from "./components/main/Home";
+
+
 import NotFound from "./components/user/NotFound";
 import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
@@ -21,6 +25,7 @@ import AdminAuth from "./components/AdminAuth";
 import Footer from "./components/main/Footer";
 import Test from "./components/main/Test";
 
+
 function App() {
   return (
     <div>
@@ -31,7 +36,9 @@ function App() {
           <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
             <Route path="home" element={<Home />} />
+           
             <Route path="login" element={<Login />} />
+        
             <Route path="signup" element={<Signup />} />
             <Route path="test" element={<Test />} />
            

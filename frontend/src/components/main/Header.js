@@ -9,45 +9,28 @@ const Header = () => {
     <div>
       <>
         {/* Navbar */}
-        <nav
-          className="navbar navbar-expand-lg navbar-light"
-          style={{ background: "#dff1ee" }}
-        >
-          {/* Container wrapper */}
-          <div className="container">
-            {/* Toggle button */}
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarButtonsExample"
-              aria-controls="navbarButtonsExample"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i className="fas fa-bars" />
-            </button>
-
-            {/* Collapsible wrapper */}
-            <div
-              className="collapse navbar-collapse justify-content-center"
-              id="navbarSupportedContent"
-            >
-              <div className="">
-                <img
-                  src={navlogo}
-                  className=""
-                  height={40}
-                  alt="MDB Logo"
-                  loading="lazy"
-                />
-              </div>
-              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5  ">
-                <li className="nav-item">
+        <div className="">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+    <div className="container-fluid">
+      <a href="#" className="navbar-brand">
+        <img src={navlogo} height={28} alt="CoolBrand" />
+      </a>
+      <button
+        type="button"
+        className="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div className="navbar-nav">
+        <li className="nav-item">
                   <NavLink className="nav-link" to="/main/home">
                     Home
                   </NavLink>
                 </li>
+
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/user/summarizer">
                     Summmarizer
@@ -63,10 +46,11 @@ const Header = () => {
                     Audiobook
                   </NavLink>
                 </li>
-              </ul>
-            </div>
-            <div className="d-flex align-items-center">
-              <NavLink
+          
+         
+        </div>
+        <div className="navbar-nav ms-auto">
+        <NavLink
                 type="button"
                 className="btn btn-primary px-3 me-2"
                 to="/main/login"
@@ -80,11 +64,12 @@ const Header = () => {
               >
                 Sign up for free
               </NavLink>
-            </div>
-            {/* Collapsible wrapper */}
-          </div>
-          {/* Container wrapper */}
-        </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
         {/* Navbar */}
       </>
     </div>
