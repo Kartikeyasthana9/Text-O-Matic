@@ -42,77 +42,31 @@ const Header = () => {
   return (
     <div>
       <>
-        {/* Navbar */}
-        <nav
-          className="navbar navbar-expand-lg navbar-light"
-          style={{ background: "#dff1ee" }}
-        >
-          {/* Container wrapper */}
-          <div className="container">
-            {/* Toggle button */}
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarButtonsExample"
-              aria-controls="navbarButtonsExample"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i className="fas fa-bars" />
-            </button>
-
-            {/* Collapsible wrapper */}
-            <div
-              className="collapse navbar-collapse justify-content-center"
-              id="navbarSupportedContent"
-            >
-              <div className="">
-                <img
-                  src={navlogo}
-                  className=""
-                  height={40}
-                  alt="MDB Logo"
-                  loading="lazy"
-                />
-              </div>
-              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5  ">
-                <li className="nav-item">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+    <div className="container-fluid">
+      <a href="#" className="navbar-brand">
+        <img src={navlogo} height={28} alt="CoolBrand" />
+      </a>
+      <button
+        type="button"
+        className="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      <div className="collapse navbar-collapse" id="navbarCollapse">
+        <ul className="navbar-nav">
+        <li className="nav-item">
                   <NavLink className="nav-link" to="/main/home">
                     Home
                   </NavLink>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-mdb-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <li>
-                      <NavLink className="dropdown-item" to="/user/summarizer">
-                        Summmarizer{" "}
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink className="dropdown-item" to="/user/sentiment">
-                        Sentiment Analysis
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink className="dropdown-item" to="/user/audiobook">
-                        Audiobook
-                      </NavLink>
-                    </li>
-                  </ul>
+
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/user/summarizer">
+                    Summmarizer
+                  </NavLink>
                 </li>
     
                
@@ -129,7 +83,6 @@ const Header = () => {
           </div>
           {/* Container wrapper */}
         </nav>
-        {/* Navbar */}
       </>
     </div>
   );
