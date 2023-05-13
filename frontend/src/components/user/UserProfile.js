@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   MDBCol,
   MDBContainer,
@@ -11,50 +11,10 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import "./userprofile.css";
+import { useSelector } from "react-redux";
 
 const UserProfile = () => {
-  const [userList, setUserList] = useState([]);
-
-  // this will fetch user data from backend
-  const getDataFromBackend = async () => {
-    const response = await fetch("http://localhost:5000/user/getall");
-    // jo bhi data ayega backend se wo data name k variable m store ho jayega
-    const data = await response.json();
-    console.log(data);
-    setUserList(data);
-  };
-  // effect hooks
-  useEffect(() => {
-    getDataFromBackend();
-  }, []);
-
-  const displayUsers = () => {
-    return (
-      <table className="table bg-white">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {userList.map((user) => (
-            <tr>
-              <td>{user._id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.password}</td>
-              
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  };
+  const { user, loading } = useSelector((state) => state.auth);
 
   return (
     <section className="vh-100" style={{ backgroundColor: "#f4f5f7" }}>
@@ -78,7 +38,8 @@ const UserProfile = () => {
                     style={{ width: "80px" }}
                     fluid
                   />
-                  <MDBTypography tag="h5">Marie Horwitz</MDBTypography>
+
+                  <MDBTypography tag="h5">{"user".name}</MDBTypography>
                   <MDBCardText>Web Designer</MDBCardText>
                   <MDBIcon far icon="edit mb-5" />
                 </MDBCol>
