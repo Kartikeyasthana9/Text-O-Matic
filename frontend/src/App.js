@@ -21,52 +21,53 @@ import AdminAuth from "./components/AdminAuth";
 import Footer from "./components/main/Footer";
 import Test from "./components/main/Test";
 import ContactUs from "./components/main/ContactUs";
+import UserProvider from "./context/UserProvider";
 
 function App() {
   return (
     <div>
       <Toaster position="top-left" />
       <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<NotFound/>}/>
-          <Route path="/" element={<Navigate to="/main/home" />} />
-          <Route element={<Main />} path="main">
-            <Route path="home" element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="test" element={<Test />} />
-            <Route path="contactus" element={<ContactUs />} />
+        <UserProvider>
+          <Routes>
+            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Navigate to="/main/home" />} />
+            <Route element={<Main />} path="main">
+              <Route path="home" element={<Home />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+              <Route path="test" element={<Test />} />
+              <Route path="contactus" element={<ContactUs />} />
+            </Route>
 
-           
-          </Route>
+            <Route
+              element={
+                <AdminAuth>
+                  <Admin />
+                </AdminAuth>
+              }
+              path="admin"
+            >
+              <Route path="profile" element={<AdminProfile />} />
+              <Route path="manageuser" element={<ManageUser />} />
+            </Route>
 
-          <Route
-            element={
-              <AdminAuth>
-                <Admin />
-              </AdminAuth>
-            }
-            path="admin"
-          >
-            <Route path="profile" element={<AdminProfile />} />
-            <Route path="manageuser" element={<ManageUser />} />
-          </Route>
-
-          <Route
-            element={
-              <UserAuth>
-                <User />
-              </UserAuth>
-            }
-            path="user"
-          >
-            <Route path="Userprofile" element={<UserProfile />} />
-            <Route path="filemanager" element={<FileManager />} />
-            <Route path="summarizer" element={<Summarizer />} />
-            <Route path="sentiment" element={<SentimentAnalysis />} />
-            <Route path="audiobook" element={<AudioBook />} />
-          </Route>
-        </Routes>
+            <Route
+              element={
+                <UserAuth>
+                  <User />
+                </UserAuth>
+              }
+              path="user"
+            >
+              <Route path="Userprofile" element={<UserProfile />} />
+              <Route path="filemanager" element={<FileManager />} />
+              <Route path="summarizer" element={<Summarizer />} />
+              <Route path="sentiment" element={<SentimentAnalysis />} />
+              <Route path="audiobook" element={<AudioBook />} />
+            </Route>
+          </Routes>
+        </UserProvider>
         {/* <Footer/> */}
       </BrowserRouter>
     </div>
