@@ -47,6 +47,8 @@ async def create_upload_file(file: UploadFile = File(...)):
 @app.post("/uploadmusicfile/")
 async def create_upload_music(file: UploadFile = File(...)):
     save_file(file, path="../uploads/music")
+    # print(file)
+    # save_as_audio_file()
     return {"filename": file.filename, 'status': 'success'}
 
 # create a api route that summarizes the text str 
