@@ -2,10 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/UserProvider";
 
-
 const Header = () => {
-
- const {loggedIn, logout} = useUserContext();
+  const { loggedIn, logout } = useUserContext();
 
   return (
     <div>
@@ -57,22 +55,19 @@ const Header = () => {
               </li>
             </ul>
             {/* Left links */}
-            
-            
           </div>
           <ul className="navbar-nav ms-auto d-flex flex-row">
-          <li className="nav-item">
-          <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
-            Logout
-          </button>
-        </li>
-        
-        </ul>
-
-                      
-          {/* Collapsible wrapper */}
+            <li className="nav-item">
+              <button
+                className="btn btn-danger ms-3"
+                aria-current="page"
+                onClick={logout}
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
         </div>
-        {/* Container wrapper */}
       </nav>
     </div>
   );
