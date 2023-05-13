@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import Swal from "sweetalert2";
 import { MDBInput } from 'mdb-react-ui-kit';
 import {useNavigate } from "react-router-dom";
+import { useUserContext } from "../../context/UserProvider";
 
 
 const Login= () => {
   const navigate = useNavigate();
+
+  const {setLoggedIn} = useUserContext();
+
   const loginSubmit = async (formdata, { resetForm }) => {
     console.log(formdata);
     resetForm();
@@ -28,6 +32,7 @@ const Login= () => {
         title: "Success",
         text: "Loggedin Successfully",
       });
+      setLoggedIn(true);
       if(data.isAdmin){
         sessionStorage.setItem("admin", JSON.stringify(data));
         navigate("/admin/profile");
@@ -98,7 +103,7 @@ const Login= () => {
                           <button
                             type="submit"
                             variant="contained"
-                            className="btn btn-secondary btn-block mb-4"
+                            className="btn btn-outline-primary btn-block mb-4"
                           >
                             Login
                           </button>
@@ -119,7 +124,7 @@ const Login= () => {
                             </button>
                             <button
                               type="button"
-                              className="btn btn-link btn-floating mx-1"
+                              className="btn btn-primary btn-floating mx-1"
                             >
                               <i className="fab fa-twitter" />
                             </button>

@@ -69,11 +69,6 @@ async def summarize(file: UploadFile = File(...)):
             'summary_length': len(summary),
             'status': 'success'}
 
-
-    
-
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
