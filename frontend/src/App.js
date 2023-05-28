@@ -31,49 +31,6 @@ function App() {
     <div>
       <Toaster position="top-left" />
       <BrowserRouter>
-<<<<<<< HEAD
-        <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Navigate to="/main/home" />} />
-          <Route element={<Main />} path="main">
-            <Route path="home" element={<Home />} />
-
-            <Route path="login" element={<Login />} />
-
-            <Route path="signup" element={<Signup />} />
-            <Route path="test" element={<Test />} />
-            <Route path="contactus" element={<ContactUs />} />
-          </Route>
-
-          <Route
-            element={
-              <AdminAuth>
-                <Admin />
-              </AdminAuth>
-            }
-            path="admin"
-          >
-            <Route path="profile" element={<AdminProfile />} />
-            <Route path="manageuser" element={<ManageUser />} />
-          </Route>
-
-          <Route
-            element={
-              <UserAuth>
-                <User />
-              </UserAuth>
-            } 
-            path="user"
-          >
-            <Route path="Userprofile" element={<UserProfile />} />
-            <Route path="filemanager" element={<FileManager />} />
-            <Route path="summarizer" element={<Summarizer />} />
-            <Route path="sentiment" element={<SentimentAnalysis />} />
-            <Route path="audiobook" element={<AudioBook />} />
-          </Route>
-        </Routes>
-        <Footer />
-=======
         <UserProvider>
           <Routes>
             <Route path="*" element={<NotFound />} />
@@ -115,7 +72,6 @@ function App() {
           </Routes>
         </UserProvider>
         {/* <Footer/> */}
->>>>>>> d1dc248268d4f7e19878d9e2220c20d517f2812f
       </BrowserRouter>
     </div>
   );

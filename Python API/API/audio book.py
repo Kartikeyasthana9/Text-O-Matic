@@ -53,5 +53,5 @@ def save_as_audio_file(path, file_name):
     engine.runAndWait()
 
 if __name__ == '__main__':
-    book= r"C:\Users\PC\Documents\sample.pdf"
+    book= r"C:/Users/PC/Downloads/newtontext.pdf"
     save_as_audio_file(book, 'book.mp3')
