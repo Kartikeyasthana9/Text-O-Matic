@@ -3,6 +3,32 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import navlogo from "./images/navlogo.png";
 
+import Swal from 'sweetalert2'
+import fireAlert from 'sweetalert2'
+
+
+function SweetAlert2() {
+  const fireAlert = () => {
+      Swal.fire({
+          title: 'want to Logout',
+          showConfirmButton: true,
+          showCancelButton: true,
+          confirmButtonText: "OK",
+          cancelButtonText: "Cancel",
+          icon: 'warning'
+      }
+      ).then((result) => {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
+
+              Swal.fire('SUCCESFULLY LOGGED OUT', '', 'success');
+
+          } else
+              Swal.fire(' Cancelled', '', 'error')
+
+      })
+  }
+}
 const Header = () => {
   
   return (
@@ -53,7 +79,8 @@ const Header = () => {
         
               <NavLink
                 type="button"
-                className="btn btn-primary me-3"
+                className="btn btn-primary me-3"onClick={fireAlert}
+                
                 to="/main/Home"
               >
               lOGOUT
