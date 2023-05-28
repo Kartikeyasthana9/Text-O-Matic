@@ -11,7 +11,6 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import "./userprofile.css";
-import { useSelector } from "react-redux";
 
 const UserProfile = () => {
   const { user, loading } = useSelector((state) => state.auth);
