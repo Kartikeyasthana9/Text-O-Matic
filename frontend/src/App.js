@@ -11,7 +11,6 @@ import User from "./components/user";
 
 import Home from "./components/main/Home";
 
-
 import NotFound from "./components/user/NotFound";
 import ManageUser from "./components/admin/ManageUser";
 import FileManager from "./components/user/FileManager";
@@ -25,7 +24,7 @@ import AdminAuth from "./components/AdminAuth";
 import Footer from "./components/main/Footer";
 import Test from "./components/main/Test";
 import ContactUs from "./components/main/ContactUs";
-
+import UserProvider from "./context/UserProvider";
 
 function App() {
   return (
@@ -33,18 +32,16 @@ function App() {
       <Toaster position="top-left" />
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Navigate to="/main/home" />} />
           <Route element={<Main />} path="main">
             <Route path="home" element={<Home />} />
-           
+
             <Route path="login" element={<Login />} />
-        
+
             <Route path="signup" element={<Signup />} />
             <Route path="test" element={<Test />} />
             <Route path="contactus" element={<ContactUs />} />
-
-           
           </Route>
 
           <Route
@@ -64,7 +61,7 @@ function App() {
               <UserAuth>
                 <User />
               </UserAuth>
-            }
+            } 
             path="user"
           >
             <Route path="Userprofile" element={<UserProfile />} />
@@ -74,7 +71,7 @@ function App() {
             <Route path="audiobook" element={<AudioBook />} />
           </Route>
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
