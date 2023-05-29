@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import {
   MDBCol,
   MDBContainer,
@@ -11,10 +12,30 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import "./userprofile.css";
-import { useSelector } from "react-redux";
 
 const UserProfile = () => {
-  const { user, loading } = useSelector((state) => state.auth);
+  const [user, setUser] = useState(null);
+  
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        // Make an API request to fetch user information
+        const response = await axios.get("/api/user/profile");
+
+        // Update the user state with the fetched information
+        setUser(response.data);
+      } catch (error) {
+        console.error("Failed to fetch user information:", error);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
+  if (!user) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="vh-100" style={{ backgroundColor: "#f4f5f7" }}>
@@ -39,7 +60,7 @@ const UserProfile = () => {
                     fluid
                   />
 
-                  <MDBTypography tag="h5">{"user".name}</MDBTypography>
+                  <MDBTypography tag="h5">{user.name}</MDBTypography>
                   <MDBCardText>Web Designer</MDBCardText>
                   <MDBIcon far icon="edit mb-5" />
                 </MDBCol>
@@ -50,7 +71,7 @@ const UserProfile = () => {
                     <hr className="mt-0 mb-4" />
                     <MDBRow className="pt-1">
                       <MDBCol size="6" className="mb-3">
-                        <MDBTypography tag="h6">Email</MDBTypography>
+                        <MDBTypography tag="h6">{user.email}</MDBTypography>
                         <MDBCardText className="text-muted">
                           info@example.com
                         </MDBCardText>

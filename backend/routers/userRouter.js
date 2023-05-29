@@ -40,6 +40,25 @@ router.get('/getall', (req, res) => {
       res.json(err);
 
     });
+// Define an API endpoint to retrieve user information
+app.get('/api/user/profile', authenticateToken, (req, res) => {
+  // Access the user ID from the authenticated request
+  const userId = req.user.id;
+
+  // Retrieve the user information from the database based on the user ID
+  User.findById(userId, (err, user) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to fetch user information' });
+    }
+
+    // Send the user information as the API response
+    res.json(user);
+  });
+});
+
+
+
+
 
 })
 router.get('/getbyemail/:email/', (req, res) => {
@@ -86,5 +105,6 @@ router.post('/authenticate', (req, res) => {
   });
 
 })
+
 
 module.exports = router;
