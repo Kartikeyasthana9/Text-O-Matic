@@ -19,6 +19,7 @@ app.use('/user', userRouter);
 app.use('/file', fileRouter);
 app.use('/util', utilRouter);
 
+app.use(express.static('./static/uploads'))
 // RRoute
 app.get('/', (req, res) => {
     res.send('Respond from express ');

@@ -1,4 +1,4 @@
-from multiprocessing.spawn import import_main_path
+# from multiprocessing.spawn import import_main_path
 from io import StringIO
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
@@ -53,5 +53,5 @@ def save_as_audio_file(path, file_name):
     engine.runAndWait()
 
 if __name__ == '__main__':
-    book= r"C:/Users/PC/Downloads/newtontext.pdf"
+    book= r"MERN poster.pdf"
     save_as_audio_file(book, 'book.mp3')

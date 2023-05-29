@@ -1,6 +1,38 @@
-import React from "react";
+import React from 'react';
 
 const SummarizeResult = ({ orgText, summarizeData }) => {
+  const sentimentCard = () => {
+    return (
+      <div className="card mt-4">
+        <div className="card-header">
+          <h4>Paragraphs Sentiments</h4>
+        </div>
+        <div className="card-body">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Positive</th>
+                <th>Neutral</th>
+                <th>Negative</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                summarizeData.sentiment.map(senti => (
+                  <tr>
+                    <td>{senti.pos}</td>
+                    <td>{senti.neu}</td>
+                    <td>{senti.neg}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <div className="col-md-10 mx-auto">
@@ -56,6 +88,7 @@ const SummarizeResult = ({ orgText, summarizeData }) => {
             </div>
           </div>
         </div>
+        {sentimentCard()}
       </div>
     </div>
   );

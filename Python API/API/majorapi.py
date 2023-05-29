@@ -1,7 +1,10 @@
 # import fastapi
 from fastapi import FastAPI, Form, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 import summarization as smz
+from summarization import get_para_sentiment
+from audio_book import save_as_audio_file
 import os
 app = FastAPI()
 
@@ -44,12 +47,17 @@ async def create_upload_file(file: UploadFile = File(...)):
     return {"filename": file.filename, 'status': 'success'}
 
 # Create a route that excepts music files
-@app.post("/uploadmusicfile/")
-async def create_upload_music(file: UploadFile = File(...)):
-    save_file(file, path="../uploads/music")
-    # print(file)
-    # save_as_audio_file()
-    return {"filename": file.filename, 'status': 'success'}
+@app.post("/generateaudiobook/")
+async def generate_audiobook(file: UploadFile = File(...)):
+    save_file(file, path="../uploads/pdfs")
+    print(file.filename)
+    save_as_audio_file(os.path.join('../uploads/pdfs',file.filename ), 'book.mp3')
+    return {"url": 'http://localhost:8000/downloadaudio/book.mp3', 'status': 'success'}
+
+@app.get("/downloadaudio/{filename}")
+async def download_file(filename: str):
+    # Serve the file to the client as a response using `FileResponse` from the given filename
+    return FileResponse(filename, media_type="application/octet-stream")
 
 # create a api route that summarizes the text str 
 @app.post("/textomatic/api/v1/summarize/text")
@@ -59,6 +67,7 @@ async def summarize_text(text: str = Form(...)):
     file.close()
     summary = smz.generate_summary('../uploads/text.txt',2)
     return {'summary': summary,
+            'sentiment' : get_para_sentiment(summary),
             'summary_length': len(summary),
             'status': 'success'}
 
@@ -68,6 +77,7 @@ async def summarize(file: UploadFile = File(...)):
     save_file(file, path="../uploads")
     summary = smz.generate_summary('../uploads/'+file.filename,2)
     return {'summary': summary,
+            'sentiment' : get_para_sentiment(summary),
             'summary_length': len(summary),
             'status': 'success'}
 

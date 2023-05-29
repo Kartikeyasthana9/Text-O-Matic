@@ -6,8 +6,6 @@ import networkx as nx
 import re
 import nltk
 
-
-
 def clean_punctuation(text):
     """Remove punctuation from text"""
     import string

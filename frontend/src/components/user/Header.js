@@ -18,7 +18,7 @@ const Header = () => {
             data-mdb-target="#navbarCenteredExample"
             aria-controls="navbarCenteredExample"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Toggle navigation"    
           >
             <i className="fas fa-bars" />
           </button>
@@ -51,6 +51,11 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link  fw-bold" href="/user/audiobook">
                   AudioBook
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link  fw-bold" href="/user/Userprofile">
+                  User Profile
                 </a>
               </li>
             </ul>

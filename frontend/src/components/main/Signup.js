@@ -87,7 +87,7 @@ const Signup = () => {
                         <form onSubmit={handleSubmit}>
                           {/* 2 column grid layout with text inputs for the first and last names */}
                           <div className="row">
-                            <div className="col-md-6 ">
+                            <div className="col-md-12 ">
                               <div className="form-outline mb-4">
                                 <MDBInput
                                   type="text"

@@ -1,29 +1,28 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Login from "./components/main/Login";
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Login from './components/main/Login';
 
-import Signup from "./components/main/Signup";
-import AdminProfile from "./components/admin/Profile";
-import UserProfile from "./components/user/UserProfile";
+import Signup from './components/main/Signup';
+import AdminProfile from './components/admin/Profile';
+import UserProfile from './components/user/UserProfile';
 
+import Main from './components/main';
+import User from './components/user';
 
-import Main from "./components/main";
-import User from "./components/user";
+import Home from './components/main/Home';
 
-import Home from "./components/main/Home";
-
-import ManageUser from "./components/admin/ManageUser";
-import FileManager from "./components/user/FileManager";
-import AudioBook from "./components/user/AudioBook";
-import Summarizer from "./components/user/Summarizer";
-import SentimentAnalysis from "./components/user/SentimentAnalysis";
-import Admin from "./components/admin";
-import { Toaster } from "react-hot-toast";
-import UserAuth from "./components/UserAuth";
-import AdminAuth from "./components/AdminAuth";
-import Footer from "./components/main/Footer";
-import Test from "./components/main/Test";
-import ContactUs from "./components/main/ContactUs";
-import UserProvider from "./context/UserProvider";
+import ManageUser from './components/admin/ManageUser';
+import FileManager from './components/user/FileManager';
+import AudioBook from './components/user/AudioBook';
+import Summarizer from './components/user/Summarizer';
+import SentimentAnalysis from './components/user/SentimentAnalysis';
+import Admin from './components/admin';
+import { Toaster } from 'react-hot-toast';
+import UserAuth from './components/UserAuth';
+import AdminAuth from './components/AdminAuth';
+import Footer from './components/main/Footer';
+import Test from './components/main/Test';
+import ContactUs from './components/main/ContactUs';
+import UserProvider from './context/UserProvider';
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
       <BrowserRouter>
         <UserProvider>
           <Routes>
-         
             <Route path="/" element={<Navigate to="/main/home" />} />
             <Route element={<Main />} path="main">
               <Route path="home" element={<Home />} />
@@ -69,36 +67,28 @@ function App() {
               <Route path="audiobook" element={<AudioBook />} />
             </Route>
           </Routes>
-        {/* <Footer/> */}
-        <Routes>
-          {/* <Route path="*" element={<NotFound />} /> */}
-          <Route path="/" element={<Navigate to="/main/home" />} />
-          <Route element={<Main />} path="main">
-            <Route path="home" element={<Home />} />
+          {/* <Routes>
+            <Route path="/" element={<Navigate to="/main/home" />} />
+            <Route element={<Main />} path="main">
+              <Route path="home" element={<Home />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+              <Route path="test" element={<Test />} />
+              <Route path="contactus" element={<ContactUs />} />
+            </Route>
 
-            <Route path="login" element={<Login />} />
-
-            <Route path="signup" element={<Signup />} />
-            <Route path="test" element={<Test />} />
-            <Route path="contactus" element={<ContactUs />} />
-          </Route>
-
-          <Route
-            element={
-              <AdminAuth>
-                <Admin />
-              </AdminAuth>
-            }
-            path="admin"
-          >
-            <Route path="profile" element={<AdminProfile />} />
-            <Route path="manageuser" element={<ManageUser />} />
-          </Route>
-
-         
-        </Routes>
-        <Footer />
-        
+            <Route
+              element={
+                <AdminAuth>
+                  <Admin />
+                </AdminAuth>
+              }
+              path="admin"
+            >
+              <Route path="profile" element={<AdminProfile />} />
+              <Route path="manageuser" element={<ManageUser />} />
+            </Route>
+          </Routes> */}
         </UserProvider>
       </BrowserRouter>
     </div>
